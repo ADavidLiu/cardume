@@ -137,6 +137,7 @@
                 padding-right: 0 !important;
             }
             &-label {
+                pointer-events: none;
                 position: absolute;
                 top: 0;
                 right: 0;

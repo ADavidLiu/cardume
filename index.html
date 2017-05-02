@@ -10,135 +10,273 @@
 </head>
 
 <body>
-   
-   <header class="container-fluid header">
-       <div class="container">
-           <div class="row">
-               <div class="header__content">
-                   <div class="header__search">
-                       <input type="text" class="header__search-bar" placeholder="O que você precisa?">
-                   </div>
-                   <div class="header__bar">
-                       <div class="clearfix header__menu">
-                           <ul class="list-inline header__menu-list">
-                               <li class="header__menu-item"><a href="#" class="header__menu-link header__menu-link--active"><img src="images/icon-home.png" alt="Início" class="header__menu-item-img"> Início</a></li>
-                               <li class="header__menu-item"><a href="#" class="header__menu-link"><img src="images/icon-movements.png" alt="Movimentação" class="header__menu-item-img">  Movimentação</a></li>
-                               <li class="header__menu-item"><a href="#" class="header__menu-link"> <img src="images/icon-pos.png" alt="POS" class="header__menu-item-img"> POS</a></li>
-                               <li class="header__menu-item"><a href="#" class="header__menu-link"><img src="images/icon-anticipated.png" alt="Antecipação" class="header__menu-item-img"> Antecipação</a></li>
-                           </ul>
-                           <ul class="list-inline header__controls">
+
+    <div id="modalCentral" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal__close">
+                    <img src="images/close.png" alt="Close modal" class="modal__close-img" data-dismiss="modal">
+                </div>
+                <div class="modal__header">
+                    <h2 class="modal__header-title">Central de notificações</h2>
+                </div>
+                <div class="modal__notifs">
+                    <div class="clearfix modal__notif">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="clearfix modal__notif">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="clearfix modal__notif modal__notif--read">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="clearfix modal__notif modal__notif--read">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="clearfix modal__notif modal__notif--read">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="clearfix modal__notif modal__notif--read">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="modal__notifs-pagination-wrapper">
+                        <ul class="list-inline modal__notifs-pagination">
+                            <li class="modal__notifs-pagination-item modal__notifs-pagination-item--active">1</li>
+                            <li class="modal__notifs-pagination-item">2</li>
+                            <li class="modal__notifs-pagination-item">3</li>
+                            <li class="modal__notifs-pagination-item">4</li>
+                            <li class="modal__notifs-pagination-item">...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalNotif" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal__close">
+                    <img src="images/close.png" alt="Close modal" class="modal__close-img" data-dismiss="modal">
+                </div>
+                <div class="modal__header">
+                    <h2 class="modal__header-title">Central de notificações</h2>
+                </div>
+                <div class="modal__notification">
+                    <div class="modal__notification-content">
+                        <div class="modal__notification-header">
+                            <h2 class="modal__notification-title">Curabitur lobortis id lo.</h2>
+                            <div class="clearfix modal__notification-info">
+                                <h4 class="modal__notification-date">22 - Fev -2017</h4>
+                                <h4 class="modal__notification-time">Recebido às 14h35</h4>
+                            </div>
+                        </div>
+                        <div class="modal__notification-copy">
+                            <p class="modal__notification-paragraph">In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. Now hands are wanted here, and then again hands are wanted there. There is no staying in any one place; for at one and the same time everything has to be done</p>
+                            <p class="modal__notification-paragraph">everywhere. It is much the same with him who endeavors the description of the scene. We must now retrace our way a little. It was mentioned that upon first breaking ground in the whale's back, the blubber-hook was inserted into the original hole there cut by the spades of the mates. But how.</p>
+                        </div>
+                        <div class="modal__notification-footer">
+                            <h4 class="modal__notification-back">&lt; Voltar para notificações</h4>
+                            <h4 class="modal__notification-number">Notificação 3 / 12</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="container-fluid header">
+        <div class="container">
+            <div class="row">
+                <div class="header__content">
+                    <div class="header__search">
+                        <input type="text" class="header__search-bar" placeholder="O que você precisa?">
+                    </div>
+                    <div class="header__bar">
+                        <div class="clearfix header__menu">
+                            <ul class="list-inline header__menu-list">
+                                <li class="header__menu-item">
+                                    <a href="#" class="header__menu-link header__menu-link--active"><img src="images/icon-home.png" alt="Início" class="header__menu-item-img"> Início</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="#" class="header__menu-link"><img src="images/icon-movements.png" alt="Movimentação" class="header__menu-item-img"> Movimentação</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="#" class="header__menu-link"> <img src="images/icon-pos.png" alt="POS" class="header__menu-item-img"> POS</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="#" class="header__menu-link"><img src="images/icon-anticipated.png" alt="Antecipação" class="header__menu-item-img"> Antecipação</a>
+                                </li>
+                            </ul>
+                            <ul class="list-inline header__controls">
                                 <li class="overlay-trigger header__controls-item dropdown">
                                     <img src="images/icon-notifications.png" alt="Notifications" class="header__menu-item-img dropdown-toggle" data-toggle="dropdown"><span class="header__controls-item-label">3</span>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">HTML</a></li>
-                                        <li><a href="#">CSS</a></li>
-                                        <li><a href="#">JavaScript</a></li>
+                                    <ul class="shadow dropdown-menu dropdown__menu dropdown__menu--notif">
+                                        <li data-toggle="modal" data-target="#modalNotif" class="dropdown__menu--notif-item">Cras quis nulla commodo, aliquam</li>
+                                        <li data-toggle="modal" data-target="#modalNotif" class="dropdown__menu--notif-item">Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum.</li>
+                                        <li data-toggle="modal" data-target="#modalNotif" class="dropdown__menu--notif-item dropdown__menu--notif-item--alert">Curabitur lobortis id lorem id bibendum.</li>
+                                        <li data-toggle="modal" data-target="#modalNotif" class="dropdown__menu--notif-item">In hac habitasse platea dictumst.</li>
+                                        <li class="dropdown__menu--notif-btn" data-toggle="modal" data-target="#modalCentral">Ver todas</li>
                                     </ul>
                                 </li>
                                 <li class="overlay-trigger header__controls-item dropdown">
                                     <img src="images/icon-settings.png" alt="Settings" class="header__menu-item-img" data-toggle="dropdown">
-                                    <ul class="shadow dropdown-menu">
+                                    <ul class="shadow dropdown-menu dropdown__menu">
                                         <li class="dropdown__item"><a href="#" class="overlay-close dropdown__link">Dados cadastrais</a></li>
                                         <li class="dropdown__item"><a href="#" class="overlay-close dropdown__link">Meu plano</a></li>
                                     </ul>
-                               </li>
-                               <li class="header__controls-item"><a href="#" class="header__menu-link header__menu-link--alt">Sair</a></li>
-                           </ul>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </header>
-   
-   <section class="container-fluid wrapper">
-       <div class="container">
-           <div class="row wrapper__row">
-               <aside class="sidebar">
-                   <div class="box shadow sidebar__item sidebar__welcome">
-                       <div class="clearfix sidebar__welcome-header">
-                           <img src="images/Logo-Cardume.png" alt="Logo" class="sidebar__welcome-logo">
-                           <img src="images/profile.png" alt="Profile" class="sidebar__welcome-profile">
-                       </div>
-                       <div class="sidebar__welcome-copy">
-                           <h3 class="sidebar__welcome-title">Olá Marcos,</h3>
-                           <p class="sidebar__welcome-text">Sua movimentação total com a máquina Cardume é</p>
-                           <h2 class="sidebar__welcome-value"><span class="sidebar__welcome-value--small">R$</span> 35.989,00</h2>
-                           <p class="sidebar__welcome-text">Faça agora a antecipação deste valor !</p>
-                           <button class="shadow sidebar__welcome-btn">Antecipar</button>
-                       </div>
-                   </div>
-                   <div class="box shadow sidebar__item sidebar__card">
-                       <h2 class="sidebar__card-title">Seu Cartão Cardume</h2>
-                       <img src="images/card.png" alt="Card" class="img-responsive sidebar__card-img">
-                       <a href="#" class="sidebar__card-link">Ver movimentação</a>
-                   </div>
-                   <div class="box shadow sidebar__item sidebar__banner">
-                       <div class="sidebar__banner-copy">
-                           <h3 class="sidebar__banner-title">CARTÃO CARDUME</h3>
-                           <p class="sidebar__banner-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium pretium tempor. Ut eget imperdiet neque.</p>
-                       </div>
-                   </div>
-               </aside>
-               <div class="content">
-                   <div class="content__row">
-                       <div class="box shadow box--vendas">
-                           <div class="box--vendas__title-wrapper box--vendas__title-wrapper--pink">
-                               <h3 class="box--vendas__title">Vendas no Débito</h3>
-                           </div>
-                           <h2 class="box--vendas__value"><span class="box--vendas__value--small">R$</span> 888,99</h2>
-                       </div>
-                       <div class="box shadow box--vendas">
-                           <div class="box--vendas__title-wrapper box--vendas__title-wrapper--orange">
-                               <h3 class="box--vendas__title">Vendas no Crédito</h3>
-                           </div>
-                           <h2 class="box--vendas__value"><span class="box--vendas__value--small">R$</span> 8.888,99</h2>
-                       </div>
-                       <div class="box shadow box--vendas">
-                           <div class="box--vendas__title-wrapper box--vendas__title-wrapper--green">
-                               <h3 class="box--vendas__title">Total de Vendas</h3>
-                           </div>
-                           <h2 class="box--vendas__value"><span class="box--vendas__value--small">R$</span> 8.888.888,99</h2>
-                       </div>
-                   </div>
-                   <div class="content__row">
-                       <div class="box shadow box--progress">
-                           <div class="box--progress__title-wrapper">
-                               <h3 class="box--progress__title">Progresso</h3>
-                           </div>
-                           <div class="box--progress__periods">
-                               <ul class="list-inline box--progress__periods-list">
-                                   <li class="box--progress__periods-item">Hora</li>
-                                   <li class="box--progress__periods-item">Semana</li>
-                                   <li class="box--progress__periods-item box--progress__periods-item--active">Mês</li>
-                                   <li class="box--progress__periods-item">Ano</li>
-                               </ul>
-                           </div>
-                           <div class="box--progress__chart-wrapper">
-                               <img src="images/chart.png" alt="Chart" class="img-responsive box--progress__chart">
-                           </div>
-                       </div>
-                       <div class="box shadow box--personalize">
-                           <div class="box--personalize__title-wrapper">
-                               <h3 class="box--personalize__title">Personalize</h3>
-                           </div>
-                           <div class="box--personalize__copy">
-                               <div class="box--personalize__icon"><span class="box--personalize__icon-label">+</span></div>
-                               <h4 class="box--personalize__text">Adicione outro card com função</h4>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
-   
-   <div class="overlay overlay-close"></div>
-   
-   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-   <script src="js/app.js"></script>
-    
+                                </li>
+                                <li class="header__controls-item"><a href="#" class="header__menu-link header__menu-link--alt">Sair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container-fluid wrapper">
+        <div class="container">
+            <div class="row wrapper__row">
+                <aside class="sidebar">
+                    <div class="box shadow sidebar__item sidebar__welcome">
+                        <div class="clearfix sidebar__welcome-header">
+                            <img src="images/Logo-Cardume.png" alt="Logo" class="sidebar__welcome-logo">
+                            <img src="images/profile.png" alt="Profile" class="sidebar__welcome-profile">
+                        </div>
+                        <div class="sidebar__welcome-copy">
+                            <h3 class="sidebar__welcome-title">Olá Marcos,</h3>
+                            <p class="sidebar__welcome-text">Sua movimentação total com a máquina Cardume é</p>
+                            <h2 class="sidebar__welcome-value"><span class="sidebar__welcome-value--small">R$</span> 35.989,00</h2>
+                            <p class="sidebar__welcome-text">Faça agora a antecipação deste valor !</p>
+                            <button class="shadow sidebar__welcome-btn">Antecipar</button>
+                        </div>
+                    </div>
+                    <div class="box shadow sidebar__item sidebar__card">
+                        <h2 class="sidebar__card-title">Seu Cartão Cardume</h2>
+                        <img src="images/card.png" alt="Card" class="img-responsive sidebar__card-img">
+                        <a href="#" class="sidebar__card-link">Ver movimentação</a>
+                    </div>
+                    <div class="box shadow sidebar__item sidebar__banner">
+                        <div class="sidebar__banner-copy">
+                            <h3 class="sidebar__banner-title">CARTÃO CARDUME</h3>
+                            <p class="sidebar__banner-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium pretium tempor. Ut eget imperdiet neque.</p>
+                        </div>
+                    </div>
+                </aside>
+                <div class="content">
+                    <div class="content__row">
+                        <div class="box shadow box--vendas">
+                            <div class="box--vendas__title-wrapper box--vendas__title-wrapper--pink">
+                                <h3 class="box--vendas__title">Vendas no Débito</h3>
+                            </div>
+                            <h2 class="box--vendas__value"><span class="box--vendas__value--small">R$</span> 888,99</h2>
+                        </div>
+                        <div class="box shadow box--vendas">
+                            <div class="box--vendas__title-wrapper box--vendas__title-wrapper--orange">
+                                <h3 class="box--vendas__title">Vendas no Crédito</h3>
+                            </div>
+                            <h2 class="box--vendas__value"><span class="box--vendas__value--small">R$</span> 8.888,99</h2>
+                        </div>
+                        <div class="box shadow box--vendas">
+                            <div class="box--vendas__title-wrapper box--vendas__title-wrapper--green">
+                                <h3 class="box--vendas__title">Total de Vendas</h3>
+                            </div>
+                            <h2 class="box--vendas__value"><span class="box--vendas__value--small">R$</span> 8.888.888,99</h2>
+                        </div>
+                    </div>
+                    <div class="content__row">
+                        <div class="box shadow box--progress">
+                            <div class="box--progress__title-wrapper">
+                                <h3 class="box--progress__title">Progresso</h3>
+                            </div>
+                            <div class="box--progress__periods">
+                                <ul class="list-inline box--progress__periods-list">
+                                    <li class="box--progress__periods-item">Hora</li>
+                                    <li class="box--progress__periods-item">Semana</li>
+                                    <li class="box--progress__periods-item box--progress__periods-item--active">Mês</li>
+                                    <li class="box--progress__periods-item">Ano</li>
+                                </ul>
+                            </div>
+                            <div class="box--progress__chart-wrapper">
+                                <img src="images/chart.png" alt="Chart" class="img-responsive box--progress__chart">
+                            </div>
+                        </div>
+                        <div class="box shadow box--personalize">
+                            <div class="box--personalize__title-wrapper">
+                                <h3 class="box--personalize__title">Personalize</h3>
+                            </div>
+                            <div class="box--personalize__copy">
+                                <div class="box--personalize__icon"><span class="box--personalize__icon-label">+</span></div>
+                                <h4 class="box--personalize__text">Adicione outro card com função</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="overlay overlay-close"></div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+
 </body>
 
 </html>

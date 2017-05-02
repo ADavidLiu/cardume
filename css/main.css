@@ -88,6 +88,7 @@ button {
     4. BOX
     5. CONTENT
     6. DROPDOWN
+    7. MODAL
 
 */
 /*------------- 1. HEADER -------------*/
@@ -215,6 +216,7 @@ button {
       .header__controls-item:last-child {
         padding-right: 0 !important; }
       .header__controls-item-label {
+        pointer-events: none;
         position: absolute;
         top: 0;
         right: 0;
@@ -705,7 +707,7 @@ button {
       justify-content: space-between; } }
 
 /*------------- 6. DROPDOWN -------------*/
-.dropdown-menu {
+.dropdown__menu {
   border: 0;
   padding: 0;
   border-radius: 4px;
@@ -714,10 +716,13 @@ button {
   left: 0;
   right: auto; }
   @media screen and (min-width: 768px) {
-    .dropdown-menu {
+    .dropdown__menu {
+      left: 1rem; } }
+  @media screen and (min-width: 992px) {
+    .dropdown__menu {
       left: auto;
       right: 0; } }
-  .dropdown-menu:before {
+  .dropdown__menu:before {
     content: "";
     width: 0;
     height: 0;
@@ -728,9 +733,76 @@ button {
     top: -7px;
     left: 2rem; }
     @media screen and (min-width: 768px) {
-      .dropdown-menu:before {
+      .dropdown__menu:before {
+        left: 1.2rem; } }
+    @media screen and (min-width: 992px) {
+      .dropdown__menu:before {
         left: auto;
         right: 1.6rem; } }
+  .dropdown__menu--notif {
+    min-width: 287px;
+    left: -1rem; }
+    @media screen and (min-width: 992px) {
+      .dropdown__menu--notif {
+        left: auto;
+        right: -1rem; } }
+    .dropdown__menu--notif:before {
+      left: 1.2rem; }
+      @media screen and (min-width: 768px) {
+        .dropdown__menu--notif:before {
+          left: 1.3rem; } }
+      @media screen and (min-width: 992px) {
+        .dropdown__menu--notif:before {
+          right: 1.5rem;
+          left: auto; } }
+    .dropdown__menu--notif-item {
+      font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+      color: #9B9B9B;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 15px 15px 15px 54px;
+      position: relative;
+      cursor: pointer; }
+      @media screen and (min-width: 768px) {
+        .dropdown__menu--notif-item {
+          font-size: 0.75rem; } }
+      .dropdown__menu--notif-item:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background-image: url("../images/logo-small.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 54px;
+        height: 2rem; }
+      .dropdown__menu--notif-item:nth-child(even) {
+        background-color: #F6F6F6; }
+      .dropdown__menu--notif-item:first-child {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px; }
+      .dropdown__menu--notif-item--alert:before {
+        background-image: url("../images/alert.png");
+        height: 1.25rem; }
+    .dropdown__menu--notif-btn {
+      cursor: pointer;
+      background-color: #1D6A8D;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      height: 33px;
+      color: #ffffff;
+      font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+      line-height: 33px; }
+      @media screen and (min-width: 768px) {
+        .dropdown__menu--notif-btn {
+          font-size: 0.75rem; } }
 
 .dropdown__item + .dropdown__item .dropdown__link {
   padding-top: 0 !important; }
@@ -744,8 +816,219 @@ button {
   padding: 1.5rem !important; }
   @media screen and (min-width: 768px) {
     .dropdown__link {
-      font-size: 1rem !important;
+      font-size: 1rem !important; } }
+  @media screen and (min-width: 992px) {
+    .dropdown__link {
       text-align: right; } }
   .dropdown__link:link, .dropdown__link:hover, .dropdown__link:focus, .dropdown__link:visited {
     background-color: transparent !important;
     color: #1D6A8D !important; }
+
+/*------------- 7. MODAL -------------*/
+.modal-dialog {
+  width: 90%;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem; }
+
+.modal-content {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0; }
+
+.modal__header {
+  background-color: #1D6A8D;
+  padding: 2.1875rem 2.1875rem 2.1875rem 3.75rem; }
+  .modal__header-title {
+    font-size: 2rem;
+    font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+    color: #ffffff; }
+
+.modal__notifs {
+  padding: 3.4375rem; }
+  .modal__notifs-pagination-wrapper {
+    text-align: right; }
+  .modal__notifs-pagination {
+    margin-top: 2.0833rem;
+    margin-left: 0; }
+    @media screen and (min-width: 768px) {
+      .modal__notifs-pagination {
+        margin-top: 1.5625rem; } }
+    .modal__notifs-pagination-item {
+      cursor: pointer;
+      font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+      font-size: 1.3333rem;
+      color: #a3a3a3;
+      font-weight: 400;
+      padding: 0 !important; }
+      @media screen and (min-width: 768px) {
+        .modal__notifs-pagination-item {
+          font-size: 1rem; } }
+      .modal__notifs-pagination-item + .modal__notifs-pagination-item {
+        margin-left: 1.25rem !important; }
+      .modal__notifs-pagination-item--active {
+        color: #1D6A8D; }
+
+.modal__notif {
+  font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+  border-top: 1px solid #CCCCCC;
+  padding: 1.6667rem 16px; }
+  @media screen and (min-width: 768px) {
+    .modal__notif {
+      padding: 1.25rem 16px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; } }
+  .modal__notif:last-child {
+    border-bottom: 1px solid #CCCCCC; }
+  .modal__notif--read {
+    background-color: #F6F6F6; }
+  .modal__notif-column {
+    position: relative; }
+  .modal__notif-img {
+    height: 20px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .modal__notif-title {
+    font-weight: 400;
+    font-size: 1.3333rem;
+    color: #595959;
+    padding-left: 1.5rem; }
+    @media screen and (min-width: 768px) {
+      .modal__notif-title {
+        padding-left: 1rem;
+        font-size: 1rem; } }
+  .modal__notif-date {
+    font-weight: 500;
+    color: #a3a3a3;
+    font-size: 1.1667rem;
+    padding-left: 1.5rem;
+    margin: 1rem 0; }
+    @media screen and (min-width: 768px) {
+      .modal__notif-date {
+        padding-left: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 0.875rem; } }
+  .modal__notif-text {
+    font-weight: 400;
+    font-size: 1rem;
+    padding-left: 1.5rem;
+    color: #9B9B9B; }
+    @media screen and (min-width: 768px) {
+      .modal__notif-text {
+        padding-left: 0;
+        font-size: 0.75rem; } }
+
+.modal__close {
+  position: absolute;
+  top: -3rem;
+  right: 0; }
+  .modal__close-img {
+    cursor: pointer;
+    width: 1.5625rem;
+    height: 1.5625rem; }
+
+.modal__notification {
+  font-family: "Cabin", "Helvetica", "Arial", sans-serif; }
+  .modal__notification-content {
+    padding: 5.875rem 8rem; }
+  .modal__notification-copy {
+    border-top: 1px solid #CCCCCC;
+    position: relative; }
+    .modal__notification-copy:before, .modal__notification-copy:after {
+      cursor: pointer;
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 3rem;
+      height: 3rem;
+      background-image: url("../images/notif-control.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center; }
+    .modal__notification-copy:before {
+      -webkit-transform: translateY(-50%) scaleX(-1);
+      -ms-transform: translateY(-50%) scaleX(-1);
+      transform: translateY(-50%) scaleX(-1);
+      left: -5.5rem; }
+    .modal__notification-copy:after {
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: -5.5rem; }
+  .modal__notification-paragraph {
+    font-size: 1.5rem;
+    color: #595959;
+    margin-top: 2rem;
+    font-weight: 400; }
+    @media screen and (min-width: 768px) {
+      .modal__notification-paragraph {
+        font-size: 1.125rem; } }
+  .modal__notification-date, .modal__notification-time {
+    font-size: 1.3333rem;
+    font-weight: 500; }
+    @media screen and (min-width: 768px) {
+      .modal__notification-date, .modal__notification-time {
+        font-size: 1rem; } }
+  .modal__notification-header {
+    padding-bottom: 2rem; }
+    @media screen and (min-width: 768px) {
+      .modal__notification-header {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end; } }
+  .modal__notification-title {
+    font-weight: 500;
+    font-size: 2.0833rem;
+    color: #1D6A8D; }
+    @media screen and (min-width: 768px) {
+      .modal__notification-title {
+        font-size: 1.5625rem;
+        display: inline-block; } }
+  .modal__notification-info {
+    margin-top: 1rem; }
+    @media screen and (min-width: 768px) {
+      .modal__notification-info {
+        margin-top: 0;
+        display: inline-block;
+        text-align: right; } }
+  .modal__notification-date {
+    color: #595959;
+    margin-bottom: 0.5rem; }
+  .modal__notification-time {
+    color: #A3A3A3; }
+  .modal__notification-footer {
+    margin-top: 7.5rem; }
+  .modal__notification-back, .modal__notification-number {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.6667rem; }
+    @media screen and (min-width: 768px) {
+      .modal__notification-back, .modal__notification-number {
+        font-size: 1.25rem;
+        display: inline-block; } }
+  .modal__notification-back {
+    color: #1D6A8D; }
+  .modal__notification-number {
+    color: #FD9D11;
+    margin-top: 1rem; }
+    @media screen and (min-width: 768px) {
+      .modal__notification-number {
+        float: right;
+        margin-top: 0; } }
