@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardume | Início</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+   
+   <header class="container-fluid header">
+       <div class="container">
+           <div class="row">
+               <div class="header__content">
+                   <div class="header__search">
+                       <input type="text" class="header__search-bar" placeholder="O que você precisa?">
+                   </div>
+                   <div class="header__bar">
+                       <div class="clearfix header__menu">
+                           <ul class="list-inline header__menu-list">
+                               <li class="header__menu-item"><a href="#" class="header__menu-link header__menu-link--active"><img src="images/icon-home.png" alt="Início" class="header__menu-item-img"> Início</a></li>
+                               <li class="header__menu-item"><a href="#" class="header__menu-link"><img src="images/icon-movements.png" alt="Movimentação" class="header__menu-item-img">  Movimentação</a></li>
+                               <li class="header__menu-item"><a href="#" class="header__menu-link"> <img src="images/icon-pos.png" alt="POS" class="header__menu-item-img"> POS</a></li>
+                               <li class="header__menu-item"><a href="#" class="header__menu-link"><img src="images/icon-anticipated.png" alt="Antecipação" class="header__menu-item-img"> Antecipação</a></li>
+                           </ul>
+                           <ul class="list-inline header__controls">
+                                <li class="overlay-trigger header__controls-item dropdown">
+                                    <img src="images/icon-notifications.png" alt="Notifications" class="header__menu-item-img dropdown-toggle" data-toggle="dropdown"><span class="header__controls-item-label">3</span>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">HTML</a></li>
+                                        <li><a href="#">CSS</a></li>
+                                        <li><a href="#">JavaScript</a></li>
+                                    </ul>
+                                </li>
+                                <li class="overlay-trigger header__controls-item dropdown">
+                                    <img src="images/icon-settings.png" alt="Settings" class="header__menu-item-img" data-toggle="dropdown">
+                                    <ul class="shadow dropdown-menu">
+                                        <li class="dropdown__item"><a href="#" class="overlay-close dropdown__link">Dados cadastrais</a></li>
+                                        <li class="dropdown__item"><a href="#" class="overlay-close dropdown__link">Meu plano</a></li>
+                                    </ul>
+                               </li>
+                               <li class="header__controls-item"><a href="#" class="header__menu-link header__menu-link--alt">Sair</a></li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </header>
+   
+   <section class="container-fluid wrapper">
+       <div class="container">
+           <div class="row wrapper__row">
+               <aside class="sidebar">
+                   <div class="box shadow sidebar__item sidebar__welcome">
+                       <div class="clearfix sidebar__welcome-header">
+                           <img src="images/Logo-Cardume.png" alt="Logo" class="sidebar__welcome-logo">
+                           <img src="images/profile.png" alt="Profile" class="sidebar__welcome-profile">
+                       </div>
+                       <div class="sidebar__welcome-copy">
+                           <h3 class="sidebar__welcome-title">Olá Marcos,</h3>
+                           <p class="sidebar__welcome-text">Sua movimentação total com a máquina Cardume é</p>
+                           <h2 class="sidebar__welcome-value"><span class="sidebar__welcome-value--small">R$</span> 35.989,00</h2>
+                           <p class="sidebar__welcome-text">Faça agora a antecipação deste valor !</p>
+                           <button class="shadow sidebar__welcome-btn">Antecipar</button>
+                       </div>
+                   </div>
+                   <div class="box shadow sidebar__item sidebar__card">
+                       <h2 class="sidebar__card-title">Seu Cartão Cardume</h2>
+                       <img src="images/card.png" alt="Card" class="img-responsive sidebar__card-img">
+                       <a href="#" class="sidebar__card-link">Ver movimentação</a>
+                   </div>
+                   <div class="box shadow sidebar__item sidebar__banner">
+                       <div class="sidebar__banner-copy">
+                           <h3 class="sidebar__banner-title">CARTÃO CARDUME</h3>
+                           <p class="sidebar__banner-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium pretium tempor. Ut eget imperdiet neque.</p>
+                       </div>
+                   </div>
+               </aside>
+               <div class="content">
+                   <div class="content__row">
+                       <div class="box shadow box--vendas">
+                           <div class="box--vendas__title-wrapper box--vendas__title-wrapper--pink">
+                               <h3 class="box--vendas__title">Vendas no Débito</h3>
+                           </div>
+                           <h2 class="box--vendas__value"><span class="box--vendas__value--small">R$</span> 888,99</h2>
+                       </div>
+                       <div class="box shadow box--vendas">
+                           <div class="box--vendas__title-wrapper box--vendas__title-wrapper--orange">
+                               <h3 class="box--vendas__title">Vendas no Crédito</h3>
+                           </div>
+                           <h2 class="box--vendas__value"><span class="box--vendas__value--small">R$</span> 8.888,99</h2>
+                       </div>
+                       <div class="box shadow box--vendas">
+                           <div class="box--vendas__title-wrapper box--vendas__title-wrapper--green">
+                               <h3 class="box--vendas__title">Total de Vendas</h3>
+                           </div>
+                           <h2 class="box--vendas__value"><span class="box--vendas__value--small">R$</span> 8.888.888,99</h2>
+                       </div>
+                   </div>
+                   <div class="content__row">
+                       <div class="box shadow box--progress">
+                           <div class="box--progress__title-wrapper">
+                               <h3 class="box--progress__title">Progresso</h3>
+                           </div>
+                           <div class="box--progress__periods">
+                               <ul class="list-inline box--progress__periods-list">
+                                   <li class="box--progress__periods-item">Hora</li>
+                                   <li class="box--progress__periods-item">Semana</li>
+                                   <li class="box--progress__periods-item box--progress__periods-item--active">Mês</li>
+                                   <li class="box--progress__periods-item">Ano</li>
+                               </ul>
+                           </div>
+                           <div class="box--progress__chart-wrapper">
+                               <img src="images/chart.png" alt="Chart" class="img-responsive box--progress__chart">
+                           </div>
+                       </div>
+                       <div class="box shadow box--personalize">
+                           <div class="box--personalize__title-wrapper">
+                               <h3 class="box--personalize__title">Personalize</h3>
+                           </div>
+                           <div class="box--personalize__copy">
+                               <div class="box--personalize__icon"><span class="box--personalize__icon-label">+</span></div>
+                               <h4 class="box--personalize__text">Adicione outro card com função</h4>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   
+   <div class="overlay overlay-close"></div>
+   
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <script src="js/app.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+.sidebar {
+    width: 100%;
+    padding: 2.5rem;
+    font-family: $main;
+    @include atSmall {
+        width: 35%;
+        padding: 0 1.875rem 1.875rem 0;
+        transform: translateY(-12rem);
+        display: inline-block;
+    }
+    @include atMedium {
+        width: 30%;
+        transform: translateY(-8rem);
+    }
+    @include atExtralarge {
+        width: 25%;
+    }
+    &__item {
+        & + & {
+            margin-top: 15px;
+        }
+    }
+    &__welcome {
+        &-logo {
+            width: 50%;
+            max-width: 118px;
+            margin-top: 1rem;
+        }
+        &-profile {
+            width: 40%;
+            max-width: 93px;
+            float: right;
+        }
+        &-copy {
+            margin-top: 0.2rem;
+            padding: 0 1.6667rem;
+            @include atSmall {
+                padding: 0 1.25rem;
+            }
+        }
+        &-title {
+            font-size: 1.8333rem;
+            color: $text-dark;
+            font-weight: 500;
+            @include atSmall {
+                font-size: 1.375rem;
+            }
+        }
+        &-text {
+            font-size: 1.5rem;
+            color: $text-light;
+            font-weight: 400;
+            margin-top: 1rem;
+            @include atSmall {
+                margin-top: 0.75rem;
+                font-size: 1.125rem;
+            }
+        }
+        &-value {
+            font-size: 3.0833rem;
+            color: $text-dark;
+            font-weight: 500;
+            margin-top: 1rem;
+            @include atSmall {
+                font-size: 2.1125rem;
+            }
+            @include atMedium {
+                font-size: 2.2125rem;
+            }
+            &--small {
+                color: $text;
+                font-weight: 700;
+                font-size: 1.5rem;
+                @include atSmall {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+        &-btn {
+            background-color: $accent-green;
+            border-radius: 5px;
+            color: $white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            height: 5rem;
+            width: 100%;
+            margin-top: 1.5rem;
+            @include atSmall {
+                margin-top: 1.125rem;
+                height: 3.75rem;
+                font-size: 1.125rem;
+            }
+        }
+    }
+    &__card {
+        padding-left: 4.1667rem !important;
+        padding-right: 4.1667rem !important;
+        text-align: center;
+        @include atSmall {
+            padding-left: 3.125rem !important;
+            padding-right: 3.125rem !important;
+        }
+        &-title {
+            font-size: 1.6667rem;
+            font-weight: 400;
+            color: $text-alt;
+            @include atSmall {
+                font-size: 1.25rem;
+            }
+        }
+        &-img {
+            margin: 1rem 0;
+        }
+        &-link {
+            font-weight: 700;
+            font-size: 1.1667rem;
+            color: $link;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            @include atSmall {
+                font-size: 0.875rem;
+            }
+        }
+    }
+    &__banner {
+        background-image: url("../images/banner-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &-title {
+            font-size: 3.0833rem;
+            color: $white;
+            font-weight: 400;
+            margin-bottom: 1.8333rem;
+            @include atSmall {
+                font-size: 2.3125rem;
+                margin-bottom: 1.375rem;
+            }
+        }
+        &-text {
+            font-weight: 400;
+            font-size: 1.25rem;
+            color: $white;
+            margin-bottom: 5rem;
+            @include atSmall {
+                font-size: 0.9375rem;
+            }
+        }
+    }
+}

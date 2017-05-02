@@ -1,0 +1,163 @@
+.header {
+    padding: 1.5rem;
+    @include atSmall {
+        padding: 2.125rem 2.125rem 0 2.125rem;
+    }
+    &__content {
+        width: 100%;
+        @include atSmall {
+            width: 65%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+        @include atMedium {
+            width: 70%;
+        }
+        @include atExtralarge {
+            width: 75%;
+        }
+    }
+    &__search {
+        margin-bottom: 3.3333rem;
+        @include atSmall {
+            margin-bottom: 2.5rem;
+        }
+        &-bar {
+            background-image: url("../images/icon-search.png");
+            background-repeat: no-repeat;
+            background-position: calc(100% - 2.25rem) center;
+            background-size: 1.1667rem 1.1667rem;
+            height: 2.9166rem;
+            width: 100%;
+            max-width: 17.625rem;
+            border: 1px solid $border;
+            border-radius: 100px;
+            padding: 0 2.25rem;
+            font-size: 1.3333rem;
+            color: $text-alt;
+            font-family: $main;
+            font-weight: 400;
+            @include atSmall {
+                font-size: 1rem;
+                background-size: 0.875rem 0.875rem;
+                height: 2.1875rem;
+                padding: 0 1.6875rem;
+                background-position: calc(100% - 1.6975rem) center;
+            }
+            &::placeholder {
+                color: $text-alt;
+            }
+        }
+    }
+    &__menu {
+        &-list {
+            margin-left: 0;
+            @include atMedium {
+                display: inline-block;
+                float: left;
+            }
+        }
+        &-item {
+            padding: 0 !important;
+            margin-bottom: 1.5rem;
+            @include atSmall {
+                margin-bottom: 0;
+            }
+            &-img {
+                height: 1.5625rem;
+                width: auto;
+                margin-right: 0.3rem;
+                transform: translateY(-5px);
+                cursor: pointer;
+            }
+        }
+        &-link {
+            color: $text-alt-dark;
+            font-family: $main;
+            font-size: 1.3333rem;
+            line-height: 1.5625rem;
+            font-weight: 700;
+            padding: 0 1.09rem 8px 1.09rem;
+            display: inline-block;
+            @include atSmall {
+                font-size: 1rem;
+            }
+            &:link,
+            &:hover,
+            &:focus,
+            &:visited {
+                color: $text-alt-dark;
+                text-decoration: none;
+            }
+            &--alt {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            &--active {
+                color: $text;
+                -webkit-box-shadow: inset 0px -3px 0px 0px $accent-green;
+                -moz-box-shadow: inset 0px -3px 0px 0px $accent-green;
+                box-shadow: inset 0px -3px 0px 0px $accent-green;
+                &:link,
+                &:hover,
+                &:focus,
+                &:visited {
+                    color: $text;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__controls {
+        margin-left: 0;
+        @media screen and (min-width: 500px) {
+            margin-top: 0.5rem;
+        }
+        @include atSmall {
+            margin-top: 1.5rem;
+        }
+        @include atMedium {
+            display: inline-block;
+            margin-top: 0;
+        }
+        @media screen and (min-width: 1015px) {
+            float: right;
+        }
+        &-item {
+            position: relative;
+            padding: 0 1rem !important;
+            &:first-child {
+                padding: 0 !important;
+                margin-left: 1rem;
+            }
+            &:nth-child(2) {
+                padding-left: 2rem !important;
+            }
+            &:last-child {
+                padding-right: 0 !important;
+            }
+            &-label {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: $accent-orange;
+                border-radius: 100%;
+                height: 1.42rem;
+                width: 1.42rem;
+                transform: translate(10%, -60%);
+                text-align: center;
+                line-height: 1.42rem;
+                font-size: 1.25rem;
+                font-family: $main;
+                color: $white;
+                font-weight: 700;
+                @include atSmall {
+                    height: 1.2rem;
+                    width: 1.2rem;
+                    line-height: 1.2rem;
+                    font-size: 0.9375rem;
+                }
+            }
+        }
+    }
+}

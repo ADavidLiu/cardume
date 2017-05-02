@@ -1,0 +1,31 @@
+.content {
+    width: 100%;
+    padding: 4.5833rem 15px;
+    @include atSmall {
+        width: 65%;
+        padding: 4.5833rem 0 1.875rem 0;
+        display: inline-block;
+    }
+    @include atMedium {
+        width: 70%;
+        padding-top: 4rem;
+    }
+    @include atExtralarge {
+        width: 75%;
+    }
+    @include atLarge {
+        padding-top: 3.5rem;
+    }
+    &__row {
+        & + & {
+            margin-top: 5rem;
+            @include atSmall {
+                margin-top: 3.75rem;
+            }
+        }
+        @include atSmall {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
