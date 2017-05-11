@@ -23,6 +23,9 @@
     5. CONTENT
     6. DROPDOWN
     7. MODAL
+    8. TITLE
+    9. EQUIPMENT
+    10. STATUS
 
 */
 
@@ -60,3 +63,18 @@
 /*------------- 7. MODAL -------------*/
 
 @import "modules/_modal.scss";
+
+
+/*------------- 8. TITLE -------------*/
+
+@import "modules/_title.scss";
+
+
+/*------------- 9. EQUIPMENT -------------*/
+
+@import "modules/_equipment.scss";
+
+
+/*------------- 10. STATUS -------------*/
+
+@import "modules/_status.scss";

@@ -27,7 +27,8 @@ ol {
 }
 
 input,
-button {
+button,
+textarea {
     border: none;
     &:focus {
         outline: none;

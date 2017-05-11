@@ -1,0 +1,17 @@
+.title {
+    padding: 1.6667rem;
+    @include atSmall {
+        padding: 1.25rem;
+    }
+    &--brand {
+        background-color: $brand-light;
+    }
+    &__text {
+        color: $white;
+        font-family: $main;
+        font-size: 2rem;
+        @include atSmall {
+            font-size: 1.5rem;
+        }
+    }
+}

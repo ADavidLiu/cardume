@@ -1,0 +1,185 @@
+.status {
+    background-color: $white;
+    border-radius: 5px;
+    display: none;
+    &__header {
+        padding: 2.5rem 3.333rem;
+        border-bottom: 2px solid $border-alt;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include atSmall {
+            padding: 1.875rem 2.5rem;
+        }
+        &-close {
+            height: 1.6667rem;
+            width: 1.6667rem;
+            cursor: pointer;
+            @include atSmall {
+                height: 1.25rem;
+                width: 1.25rem;
+            }
+        }
+        &-title {
+            font-family: $main;
+            font-size: 1.667rem;
+            color: $text-alt-dark;
+            font-weight: 400;
+            @include atSmall {
+                font-size: 1.25rem;
+            }
+        }
+    }
+    &__process {
+        padding: 2rem;
+        text-align: center;
+        border-bottom: 2px solid $border-alt;
+        @include atSmall {
+            padding: 6.25rem 2rem 3.4375rem 2rem;
+        }
+        &-list {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            @include atSmall {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+        &-item {
+            width: 100%;
+            min-height: 160px;
+            padding: 1.667rem 0 2.5rem 0;
+            text-align: center;
+            font-family: $main;
+            color: $text-alt-dark;
+            background-color: $process-bg;
+            border: 1px solid $process-border;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            @include atSmall {
+                width: 33.33%;
+                padding: 1.25rem 0 1.875rem 0;
+            }
+            &--confirmed {
+                background-color: $accent-green;
+                border-color: $accent-green;
+                color: $white;
+            }
+            &--current {
+                background-color: $accent-yellow;
+                border-color: $accent-yellow;
+                color: $white;
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    width: 16rem;
+                    height: 2.875rem;
+                    transform: translate(-100%, -150%);
+                    background-image: url("../images/current-process.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    display: none;
+                    @include atSmall {
+                        display: block;
+                    }
+                    @include atMedium {
+                        width: 21rem;
+                    }
+                    @include atLarge {
+                        width: 22.5rem;
+                    }
+                }
+            }
+            &+& {
+                margin-top: 1.667rem;
+                @include atSmall {
+                    margin-left: 1.25rem;
+                    margin-top: 0;
+                }
+            }
+        }
+        &-img {
+            height: 35px;
+            width: auto;
+            margin: 0 auto 2.08333rem auto;
+            @include atSmall {
+                margin: 0 auto 1.25rem auto;
+            }
+        }
+        &-title,
+        &-subtitle {
+            font-size: 1.333rem;
+            font-weight: 700;
+            @include atSmall {
+                font-size: 1rem;
+            }
+        }
+        &-subtitle {
+            font-weight: 400;
+            margin-top: 0.5rem;
+        }
+    }
+    &__timeline {
+        padding: 3.1666rem 3.3333rem;
+        @include atSmall {
+            padding: 1.75rem 2.5rem;
+        }
+        &-list {
+            max-height: 100%;
+            overflow: scroll;
+        }
+        &-item {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -3.2rem;
+                left: 1rem;
+                width: 1px;
+                height: calc(65% + 3rem);
+                background-color: $text-alt-dark;
+                @include atSmall {
+                    bottom: -3.5rem;
+                    height: calc(60% + 3rem);
+                }
+            }
+            &+& {
+                margin-top: 4rem;
+            }
+            &-decoration {
+                display: inline-block;
+                margin-right: 3.125rem;
+            }
+            &-icon {
+                width: 2rem;
+                height: 2rem;
+                display: inline-block;
+            }
+            &-copy {
+                display: inline-block;
+            }
+            &-text {
+                font-family: $main;
+                font-size: 1.333rem;
+                color: $text-alt-dark;
+                @include atSmall {
+                    font-size: 1rem;
+                }
+                &--date {
+                    margin-top: 0.5rem;
+                    margin-bottom: 1rem;
+                }
+                &--accent {
+                    color: $text;
+                }
+            }
+        }
+    }
+}

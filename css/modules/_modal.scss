@@ -41,7 +41,7 @@
                 @include atSmall {
                     font-size: 1rem;
                 }
-                & + & {
+                &+& {
                     margin-left: 1.25rem !important;
                 }
                 &--active {
@@ -221,6 +221,288 @@
             @include atSmall {
                 float: right;
                 margin-top: 0;
+            }
+        }
+    }
+    &__password {
+        padding: 4.5rem 2rem 4.58333rem 2rem;
+        @include atSmall {
+            padding: 3.875rem 2rem 3.4375rem 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        @include atSmall {
+            display: flex;
+            align-items: center;
+        }
+        &-img {
+            margin: 0 auto;
+            @include atSmall {
+                margin: 0;
+                display: inline-block;
+            }
+        }
+        &-copy,
+        &-confirm {
+            @include atSmall {
+                width: 40%;
+                display: inline-block;
+                margin-left: 2.8125rem;
+            }
+            @include atMedium {
+                width: 30%;
+            }
+            @include atLarge {
+                width: 50%;
+            }
+        }
+        &-confirm {
+            display: none;
+        }
+        &-title {
+            font-family: $main;
+            color: $accent-orange;
+            font-size: 2.08333rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            @include atSmall {
+                font-size: 1.5625rem;
+            }
+            &--alt {
+                margin-bottom: 0;
+            }
+        }
+        &-text,
+        &-terminal {
+            font-family: $main;
+            font-size: 1.333rem;
+            color: $text;
+            font-weight: 400;
+            display: inline-block;
+            @include atSmall {
+                font-size: 1rem;
+            }
+            &--light {
+                color: $text-alt-dark;
+                font-size: 1.1667rem;
+                @include atSmall {
+                    font-size: 0.875rem;
+                }
+            }
+            &--big {
+                font-size: 1.5rem;
+                margin: 2.667rem 0;
+                @include atSmall {
+                    margin: 2rem 0;
+                    font-size: 1.125rem;
+                }
+            }
+        }
+        &-link {
+            color: $brand-light;
+            text-decoration: none;
+            font-weight: 700;
+            &:link,
+            &:hover,
+            &:focus,
+            &:visited {
+                color: $brand-light;
+                text-decoration: none;
+            }
+        }
+        &-terminal {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 1.333rem;
+            @include atSmall {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+        &-info {
+            &-item {
+                &+& {
+                    margin-top: 0.75rem;
+                }
+                &-label {
+                    width: 50%;
+                    @include atLarge {
+                        width: 25%;
+                    }
+                }
+            }
+        }
+        &-btn {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            height: 4rem;
+            border-radius: 5px;
+            width: 45%;
+            float: left;
+            font-family: $main;
+            color: $white;
+            font-size: 1.667rem;
+            font-weight: 400;
+            @include atSmall {
+                font-size: 1.25rem;
+                height: 3.5rem;
+            }
+            &+& {
+                margin-left: 1.6667rem;
+                @include atSmall {
+                    margin-left: 1.25rem;
+                }
+            }
+            &--green {
+                background-color: $accent-green;
+            }
+            &--pink {
+                background-color: $accent-pink;
+            }
+            &--blue {
+                background-color: $brand-light;
+            }
+        }
+    }
+    &__help {
+        padding: 4.5rem 2rem 4.58333rem 2rem;
+        @include atSmall {
+            padding: 3.875rem 2rem 3.4375rem 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        @include atSmall {
+            display: flex;
+            align-items: center;
+        }
+        &-img {
+            margin: 0 auto;
+            @include atSmall {
+                margin: 0;
+                display: inline-block;
+            }
+        }
+        &-copy {
+            @include atSmall {
+                width: 40%;
+                display: inline-block;
+                margin-left: 2.8125rem;
+            }
+            @include atMedium {
+                width: 30%;
+            }
+            @include atLarge {
+                width: 50%;
+            }
+        }
+        &-title {
+            font-family: $main;
+            color: $accent-orange;
+            font-size: 2.08333rem;
+            font-weight: 400;
+            @include atSmall {
+                font-size: 1.5625rem;
+            }
+            &--alt {
+                margin-bottom: 0;
+            }
+        }
+        &-text,
+        &-confirmed {
+            font-family: $main;
+            font-size: 1.333rem;
+            color: $text;
+            font-weight: 400;
+            @include atSmall {
+                font-size: 1rem;
+            }
+            &--light {
+                color: $text-alt-dark;
+                font-size: 1.1667rem;
+                @include atSmall {
+                    font-size: 0.875rem;
+                }
+            }
+            &--big {
+                font-size: 1.5rem;
+                margin: 2.667rem 0 1.333rem 0;
+                @include atSmall {
+                    margin: 2rem 0 1rem 0;
+                    font-size: 1.125rem;
+                }
+            }
+        }
+        &-confirmed {
+            text-align: center;
+            display: none;
+            &-img {
+                width: 8rem;
+                height: auto;
+                margin: 0 auto;
+            }
+            &-title {
+                font-family: $main;
+                color: $accent-green;
+                font-size: 1.6667rem;
+                font-weight: 700;
+                margin: 3.75rem 0 1rem 0;
+                @include atSmall {
+                    font-size: 1.25rem;
+                }
+            }
+            &-subtitle {
+                font-family: $main;
+                color: $text-alt-dark;
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin-bottom: 4.125rem;
+                @include atSmall {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+        &-info {
+            &-item {
+                margin-top: 1.6667rem;
+                @include atSmall {
+                    margin-top: 1.25rem;
+                }
+            }
+        }
+        &-btn {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            height: 4rem;
+            border-radius: 5px;
+            width: 45%;
+            font-family: $main;
+            color: $white;
+            font-size: 1.667rem;
+            font-weight: 400;
+            @include atSmall {
+                font-size: 1.25rem;
+                height: 3.5rem;
+            }
+            &--brand {
+                background-color: $brand;
+            }
+        }
+        &-message {
+            background-color: #f5f5f5;
+            color: rgba(155, 155, 155, 0.5);
+            font-family: $main;
+            font-size: 1.3333rem;
+            padding: 1.333rem;
+            height: 10.8333rem;
+            width: 100%;
+            font-weight: 400;
+            margin-bottom: 1.6667rem;
+            @include atSmall {
+                font-size: 1rem;
+                padding: 1rem;
+                height: 8.125rem;
+                margin-bottom: 1.25rem;
+            }
+            &::placeholder {
+                color: rgba(155, 155, 155, 0.5);
             }
         }
     }

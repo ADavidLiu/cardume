@@ -117,8 +117,16 @@
             color: $link;
             display: inline-block;
             margin-bottom: 0.5rem;
+            text-decoration: none;
             @include atSmall {
                 font-size: 0.875rem;
+            }
+            &:link,
+            &:hover,
+            &:focus,
+            &:visited {
+                color: $link;
+                text-decoration: none;
             }
         }
     }

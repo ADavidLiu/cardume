@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardume | POS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    
+    <div id="modalCentral" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal__close">
+                    <img src="images/close.png" alt="Close modal" class="modal__close-img" data-dismiss="modal">
+                </div>
+                <div class="modal__header">
+                    <h2 class="modal__header-title">Central de notificações</h2>
+                </div>
+                <div class="modal__notifs">
+                    <div class="clearfix modal__notif">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="clearfix modal__notif">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="clearfix modal__notif modal__notif--read">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="clearfix modal__notif modal__notif--read">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="clearfix modal__notif modal__notif--read">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="clearfix modal__notif modal__notif--read">
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <img src="images/alert.png" alt="Alert" class="modal__notif-img">
+                            <h3 class="modal__notif-title">Curabitur lobortis id lorem id bibendum.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <h3 class="modal__notif-date">22 - Fev -2017 / 14h35</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 modal__notif-column">
+                            <p class="modal__notif-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor ...</p>
+                        </div>
+                    </div>
+                    <div class="modal__notifs-pagination-wrapper">
+                        <ul class="list-inline modal__notifs-pagination">
+                            <li class="modal__notifs-pagination-item modal__notifs-pagination-item--active">1</li>
+                            <li class="modal__notifs-pagination-item">2</li>
+                            <li class="modal__notifs-pagination-item">3</li>
+                            <li class="modal__notifs-pagination-item">4</li>
+                            <li class="modal__notifs-pagination-item">...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalNotif" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal__close">
+                    <img src="images/close.png" alt="Close modal" class="modal__close-img" data-dismiss="modal">
+                </div>
+                <div class="modal__header">
+                    <h2 class="modal__header-title">Central de notificações</h2>
+                </div>
+                <div class="modal__notification">
+                    <div class="modal__notification-content">
+                        <div class="modal__notification-header">
+                            <h2 class="modal__notification-title">Curabitur lobortis id lo.</h2>
+                            <div class="clearfix modal__notification-info">
+                                <h4 class="modal__notification-date">22 - Fev -2017</h4>
+                                <h4 class="modal__notification-time">Recebido às 14h35</h4>
+                            </div>
+                        </div>
+                        <div class="modal__notification-copy">
+                            <p class="modal__notification-paragraph">In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. Now hands are wanted here, and then again hands are wanted there. There is no staying in any one place; for at one and the same time everything has to be done</p>
+                            <p class="modal__notification-paragraph">everywhere. It is much the same with him who endeavors the description of the scene. We must now retrace our way a little. It was mentioned that upon first breaking ground in the whale's back, the blubber-hook was inserted into the original hole there cut by the spades of the mates. But how.</p>
+                        </div>
+                        <div class="modal__notification-footer">
+                            <h4 class="modal__notification-back">&lt; Voltar para notificações</h4>
+                            <h4 class="modal__notification-number">Notificação 3 / 12</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modalPassword" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal__close">
+                    <img src="images/close.png" alt="Close modal" class="modal__close-img" data-dismiss="modal">
+                </div>
+                <div class="modal__password">
+                    <img src="images/phone-password.png" alt="Password" class="img-responsive modal__password-img">
+                    <div class="modal__password-copy">
+                        <h2 class="modal__password-title">Gerar nova senha</h2>
+                        <p class="modal__password-text">Terminal</p>
+                        <h3 class="modal__password-terminal">NF45678</h3>
+                        <div class="modal__password-info">
+                            <div class="modal__password-info-item">
+                                <h4 class="modal__password-text modal__password-text--light modal__password-info-item-label">Nº serial</h4>
+                                <p class="modal__password-text">3345787-234</p>
+                            </div>
+                            <div class="modal__password-info-item">
+                                <h4 class="modal__password-text modal__password-text--light modal__password-info-item-label">Marca/modelo</h4>
+                                <p class="modal__password-text">Cielo - 123456</p>
+                            </div>
+                            <div class="modal__password-info-item">
+                                <h4 class="modal__password-text modal__password-text--light modal__password-info-item-label">Última abertura</h4>
+                                <p class="modal__password-text">01 / 02 as 14h35</p>
+                            </div>
+                            <div class="modal__password-info-item">
+                                <h4 class="modal__password-text modal__password-text--light modal__password-info-item-label">Última transação</h4>
+                                <p class="modal__password-text">01 / 02 as 14h35</p>
+                            </div>
+                        </div>
+                        <h2 class="modal__password-text modal__password-text--big">Deseja realmente gerar nova senha?</h2>
+                        <div class="clearfix modal__password-btns">
+                            <button class="modal__password-btn modal__password-btn--green">Sim</button>
+                            <button data-dismiss="modal" class="modal__password-btn modal__password-btn--pink">Cancelar</button>
+                        </div>
+                    </div>
+                    <div class="modal__password-confirm">
+                        <h2 class="modal__password-title modal__password-title--alt">Gerar nova senha</h2>
+                        <h2 class="modal__password-text modal__password-text--big">Enviamos uma nova senha para o email <a href="mailto:fulano@mail.com" class="modal__password-link">fulano@mail.com</a></h2>
+                        <div class="clearfix modal__password-btns">
+                            <button data-dismiss="modal" class="modal__password-btn modal__password-btn--blue">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modalHelp" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal__close">
+                    <img src="images/close.png" alt="Close modal" class="modal__close-img" data-dismiss="modal">
+                </div>
+                <div class="modal__help">
+                    <img src="images/phone-help.png" alt="Password" class="img-responsive modal__help-img">
+                    <div class="modal__help-copy">
+                        <h2 class="modal__help-title">Ajuda</h2>
+                        <div class="modal__help-info">
+                            <div class="modal__help-info-item">
+                                <h4 class="modal__help-text modal__help-text--light modal__help-info-item-label">Terminal</h4>
+                                <p class="modal__help-text">NF45678</p>
+                            </div>
+                            <div class="modal__help-info-item">
+                                <h4 class="modal__help-text modal__help-text--light modal__help-info-item-label">Marca/modelo</h4>
+                                <p class="modal__help-text">Cielo - 345678-123</p>
+                            </div>
+                        </div>
+                        <h2 class="modal__help-text modal__help-text--big">Por favor, conte para nós o que aconteceu:</h2>
+                        <textarea cols="30" rows="10" class="modal__help-message" placeholder="Digite aqui a sua mensagem"></textarea>
+                        <div class="clearfix modal__help-btns">
+                            <button class="modal__help-btn modal__help-btn--brand">Enviar</button>
+                        </div>
+                    </div>
+                    <div class="modal__help-confirmed">
+                        <img src="images/icon-message-sent.png" alt="Message sent" class="img-responsive modal__help-confirmed-img">
+                        <h2 class="modal__help-confirmed-title">Solicitação de ajuda enviada com sucesso! :)</h2>
+                        <h3 class="modal__help-confirmed-subtitle">Fusce vehicula dolor arcu, sit amet blandit dolo.</h3>
+                        <div class="clearfix modal__help-btns">
+                            <button data-dismiss="modal" class="modal__help-btn modal__help-btn--brand">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="container-fluid header">
+        <div class="container">
+            <div class="row">
+                <div class="header__content">
+                    <div class="header__search">
+                        <input type="text" class="header__search-bar" placeholder="O que você precisa?">
+                    </div>
+                    <div class="header__bar">
+                        <div class="clearfix header__menu">
+                            <ul class="list-inline header__menu-list">
+                                <li class="header__menu-item">
+                                    <a href="#" class="header__menu-link"><img src="images/icon-home.png" alt="Início" class="header__menu-item-img"> Início</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="#" class="header__menu-link"><img src="images/icon-movements.png" alt="Movimentação" class="header__menu-item-img"> Movimentação</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="#" class="header__menu-link header__menu-link--active"> <img src="images/icon-pos.png" alt="POS" class="header__menu-item-img"> POS</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a href="#" class="header__menu-link"><img src="images/icon-anticipated.png" alt="Antecipação" class="header__menu-item-img"> Antecipação</a>
+                                </li>
+                            </ul>
+                            <ul class="list-inline header__controls">
+                                <li class="overlay-trigger header__controls-item dropdown">
+                                    <img src="images/icon-notifications.png" alt="Notifications" class="header__menu-item-img dropdown-toggle" data-toggle="dropdown"><span class="header__controls-item-label">3</span>
+                                    <ul class="shadow dropdown-menu dropdown__menu dropdown__menu--notif">
+                                        <li data-toggle="modal" data-target="#modalNotif" class="dropdown__menu--notif-item">Cras quis nulla commodo, aliquam</li>
+                                        <li data-toggle="modal" data-target="#modalNotif" class="dropdown__menu--notif-item">Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum.</li>
+                                        <li data-toggle="modal" data-target="#modalNotif" class="dropdown__menu--notif-item dropdown__menu--notif-item--alert">Curabitur lobortis id lorem id bibendum.</li>
+                                        <li data-toggle="modal" data-target="#modalNotif" class="dropdown__menu--notif-item">In hac habitasse platea dictumst.</li>
+                                        <li class="dropdown__menu--notif-btn" data-toggle="modal" data-target="#modalCentral">Ver todas</li>
+                                    </ul>
+                                </li>
+                                <li class="overlay-trigger header__controls-item dropdown">
+                                    <img src="images/icon-settings.png" alt="Settings" class="header__menu-item-img" data-toggle="dropdown">
+                                    <ul class="shadow dropdown-menu dropdown__menu">
+                                        <li class="dropdown__item"><a href="#" class="overlay-close dropdown__link">Dados cadastrais</a></li>
+                                        <li class="dropdown__item"><a href="#" class="overlay-close dropdown__link">Meu plano</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__controls-item"><a href="#" class="header__menu-link header__menu-link--alt">Sair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container-fluid wrapper">
+        <div class="container">
+            <div class="row wrapper__row">
+                <aside class="sidebar">
+                    <div class="box shadow sidebar__item sidebar__welcome">
+                        <div class="clearfix sidebar__welcome-header">
+                            <img src="images/Logo-Cardume.png" alt="Logo" class="sidebar__welcome-logo">
+                            <img src="images/profile.png" alt="Profile" class="sidebar__welcome-profile">
+                        </div>
+                        <div class="sidebar__welcome-copy">
+                            <h3 class="sidebar__welcome-title">Olá Marcos,</h3>
+                            <p class="sidebar__welcome-text">Sua movimentação total com a máquina Cardume é</p>
+                            <h2 class="sidebar__welcome-value"><span class="sidebar__welcome-value--small">R$</span> 35.989,00</h2>
+                            <p class="sidebar__welcome-text">Faça agora a antecipação deste valor !</p>
+                            <button class="shadow sidebar__welcome-btn">Antecipar</button>
+                        </div>
+                    </div>
+                    <div class="box shadow sidebar__item sidebar__card">
+                        <h2 class="sidebar__card-title">Seu Cartão Cardume</h2>
+                        <img src="images/card.png" alt="Card" class="img-responsive sidebar__card-img">
+                        <a href="#" class="sidebar__card-link">Ver movimentação</a>
+                    </div>
+                    <div class="box shadow sidebar__item sidebar__banner">
+                        <div class="sidebar__banner-copy">
+                            <h3 class="sidebar__banner-title">CARTÃO CARDUME</h3>
+                            <p class="sidebar__banner-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium pretium tempor. Ut eget imperdiet neque.</p>
+                        </div>
+                    </div>
+                </aside>
+                <div class="content content--alt">
+                    <div class="content__row content__row--title">
+                        <div class="title title--brand">
+                            <span class="title__text">Meus equipamentos</span>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="equipment__list">
+                        <div class="content__row--alt">
+                            <div class="shadow equipment">
+                                <div class="equipment__status equipment__status--active"><span class="equipment__status-text">ativa</span></div>
+                                <div class="equipment__group equipment__terminal">
+                                    <h3 class="equipment__title equipment__title--big">Terminal</h3>
+                                    <h4 class="equipment__subtitle equipment__subtitle--big">NF45678</h4>
+                                </div>
+                                <div class="equipment__group equipment__info">
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title">Nº Serial</h4>
+                                        <h5 class="equipment__subtitle">3345787-234</h5>
+                                    </div>
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title">Última abertura</h4>
+                                        <h5 class="equipment__subtitle">01 / 02 as 14h35</h5>
+                                    </div>
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title">Marca/modelo</h4>
+                                        <h5 class="equipment__subtitle">Cielo - 123456</h5>
+                                    </div>
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title">Última transação</h4>
+                                        <h5 class="equipment__subtitle">01 / 02 as 14h35</h5>
+                                    </div>
+                                </div>
+                                <div class="equipment__group equipment__group--alt equipment__actions">
+                                    <div class="overlay__trigger equipment__actions-item" data-toggle="modal" data-target="#modalPassword">
+                                        <div class="equipment__actions-content">
+                                            <img src="images/icon-lock.png" alt="Lock" class="img equipment__actions-item-img">
+                                            <h4 class="equipment__title equipment__title--dark" >nova<br>senha</h4>
+                                        </div>
+                                    </div>
+                                    <div class="overlay__trigger equipment__actions-item" data-toggle="modal" data-target="#modalHelp">
+                                        <div class="equipment__actions-content">
+                                            <img src="images/icon-help.png" alt="Lock" class="img equipment__actions-item-img">
+                                            <h4 class="equipment__title equipment__title--dark">ajuda</h4>
+                                        </div>
+                                    </div>
+                                    <div class="equipment__actions-item equipment__actions-item--disabled">
+                                        <div class="equipment__actions-content">
+                                            <img src="images/icon-details.png" alt="Lock" class="img equipment__actions-item-img">
+                                            <h4 class="equipment__title equipment__title--dark equipment__title--disabled">detalhes</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadow equipment">
+                                <div class="equipment__status equipment__status--cancelled"><span class="equipment__status-text">cancelada</span></div>
+                                <div class="equipment__group equipment__terminal">
+                                    <h3 class="equipment__title equipment__title--big equipment__title--disabled">Terminal</h3>
+                                    <h4 class="equipment__subtitle equipment__subtitle--big equipment__subtitle--disabled">NF45678</h4>
+                                </div>
+                                <div class="equipment__group equipment__info">
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title equipment__title--disabled">Nº Serial</h4>
+                                        <h5 class="equipment__subtitle equipment__subtitle--disabled">3345787-234</h5>
+                                    </div>
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title equipment__title--disabled">Última abertura</h4>
+                                        <h5 class="equipment__subtitle equipment__subtitle--disabled">01 / 02 as 14h35</h5>
+                                    </div>
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title equipment__title--disabled">Marca/modelo</h4>
+                                        <h5 class="equipment__subtitle equipment__subtitle--disabled">Cielo - 123456</h5>
+                                    </div>
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title equipment__title--disabled">Última transação</h4>
+                                        <h5 class="equipment__subtitle equipment__subtitle--disabled">01 / 02 as 14h35</h5>
+                                    </div>
+                                </div>
+                                <div class="equipment__group equipment__group--alt equipment__actions">
+                                    <div class="equipment__actions-item equipment__actions-item--disabled">
+                                        <div class="equipment__actions-content">
+                                            <img src="images/icon-lock-disabled.png" alt="Lock" class="img equipment__actions-item-img">
+                                            <h4 class="equipment__title equipment__title--dark equipment__title--disabled">nova<br>senha</h4>
+                                        </div>
+                                    </div>
+                                    <div class="equipment__actions-item equipment__actions-item--disabled">
+                                        <div class="equipment__actions-content">
+                                            <img src="images/icon-help-disabled.png" alt="Lock" class="img equipment__actions-item-img">
+                                            <h4 class="equipment__title equipment__title--dark equipment__title--disabled">ajuda</h4>
+                                        </div>
+                                    </div>
+                                    <div class="equipment__actions-item equipment__actions-item--disabled">
+                                        <div class="equipment__actions-content">
+                                            <img src="images/icon-details.png" alt="Lock" class="img equipment__actions-item-img">
+                                            <h4 class="equipment__title equipment__title--dark equipment__title--disabled">detalhes</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadow equipment equipment--approved">
+                                <div class="equipment--approved__overlay"><span class="equipment--approved__overlay-text">Acompanhar pedido</span></div>
+                                <div class="equipment__status equipment__status--approved"><span class="equipment__status-text">aprovação</span></div>
+                                <div class="equipment__group equipment__terminal">
+                                    <h3 class="equipment__title equipment__title--big equipment__title--disabled">Terminal</h3>
+                                    <h4 class="equipment__subtitle equipment__subtitle--big equipment__subtitle--disabled">NF45678</h4>
+                                </div>
+                                <div class="equipment__group equipment__info">
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title equipment__title--disabled">Nº Serial</h4>
+                                        <h5 class="equipment__subtitle equipment__subtitle--disabled">3345787-234</h5>
+                                    </div>
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title equipment__title--disabled">Última abertura</h4>
+                                        <h5 class="equipment__subtitle equipment__subtitle--disabled">01 / 02 as 14h35</h5>
+                                    </div>
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title equipment__title--disabled">Marca/modelo</h4>
+                                        <h5 class="equipment__subtitle equipment__subtitle--disabled">Cielo - 123456</h5>
+                                    </div>
+                                    <div class="equipment__info-item">
+                                        <h4 class="equipment__title equipment__title--disabled">Última transação</h4>
+                                        <h5 class="equipment__subtitle equipment__subtitle--disabled">01 / 02 as 14h35</h5>
+                                    </div>
+                                </div>
+                                <div class="equipment__group equipment__group--alt equipment__actions">
+                                    <div class="equipment__actions-item equipment__actions-item--disabled">
+                                        <div class="equipment__actions-content">
+                                            <img src="images/icon-lock-disabled.png" alt="Lock" class="img equipment__actions-item-img">
+                                            <h4 class="equipment__title equipment__title--dark equipment__title--disabled">nova<br>senha</h4>
+                                        </div>
+                                    </div>
+                                    <div class="equipment__actions-item equipment__actions-item--disabled">
+                                        <div class="equipment__actions-content">
+                                            <img src="images/icon-help-disabled.png" alt="Lock" class="img equipment__actions-item-img">
+                                            <h4 class="equipment__title equipment__title--dark equipment__title--disabled">ajuda</h4>
+                                        </div>
+                                    </div>
+                                    <div class="equipment__actions-item equipment__actions-item--disabled">
+                                        <div class="equipment__actions-content">
+                                            <img src="images/icon-details.png" alt="Lock" class="img equipment__actions-item-img">
+                                            <h4 class="equipment__title equipment__title--dark equipment__title--disabled">detalhes</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content__row--alt">
+                            <div class="shadow equipment__add">
+                                <div class="equipment__add-copy">
+                                    <div class="equipment__add-icon"><span class="equipment__add-icon-label">+</span></div>
+                                    <h4 class="equipment__add-text">Solicitar nova maquininha</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shadow status">
+                        <div class="status__header">
+                            <h2 class="status__header-title">Status do pedido</h2>
+                            <img src="images/status-close.png" alt="Close" class="status__header-close">
+                        </div>
+                        <div class="status__process">
+                            <div class="status__process-list">
+                                <div class="status__process-item status__process-item--confirmed">
+                                    <img src="images/icon-confirmed.png" alt="Confirmed" class="img-responsive status__process-img">
+                                    <h3 class="status__process-title">Envio do pedido</h3>
+                                    <h4 class="status__process-subtitle">confirmado</h4>
+                                </div>
+                                <div class="status__process-item status__process-item--confirmed">
+                                    <img src="images/icon-payment.png" alt="Confirmed" class="img-responsive status__process-img">
+                                    <h3 class="status__process-title">Pagamento</h3>
+                                    <h4 class="status__process-subtitle">confirmado</h4>
+                                </div>
+                                <div class="status__process-item status__process-item--current">
+                                    <img src="images/icon-shipping.png" alt="Confirmed" class="img-responsive status__process-img">
+                                    <h3 class="status__process-title">Envio do aparelho</h3>
+                                    <h4 class="status__process-subtitle">aguardando</h4>
+                                </div>
+                                <div class="status__process-item">
+                                    <img src="images/icon-delivery.png" alt="Confirmed" class="img-responsive status__process-img">
+                                    <h3 class="status__process-title">Entrega</h3>
+                                    <h4 class="status__process-subtitle">aguardando</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="status__timeline">
+                            <ul class="status__timeline-list">
+                                <li class="status__timeline-item">
+                                    <div class="status__timeline-item-decoration">
+                                        <img src="images/icon-shipping-timeline.png" alt="Shipping" class="img-responsieve status__timeline-item-icon">
+                                    </div>
+                                    <div class="status__timeline-item-copy">
+                                        <h4 class="status__timeline-item-text status__timeline-item-text--date">17 - Dez - 2016</h4>
+                                        <h3 class="status__timeline-item-text status__timeline-item-text--accent">Enviado para a transportadora</h3>
+                                        <p class="status__timeline-item-text status__timeline-item-text--description">Seu pedido acaba de ser enviado para a transportadora.</p>
+                                    </div>
+                                </li>
+                                <li class="status__timeline-item">
+                                    <div class="status__timeline-item-decoration">
+                                        <img src="images/icon-payment-timeline.png" alt="Payment" class="img-responsieve status__timeline-item-icon">
+                                    </div>
+                                    <div class="status__timeline-item-copy">
+                                        <h4 class="status__timeline-item-text status__timeline-item-text--date">15 - Dez - 2016</h4>
+                                        <h3 class="status__timeline-item-text status__timeline-item-text--accent">Pagamento aprovado!</h3>
+                                        <p class="status__timeline-item-text status__timeline-item-text--description">Seu pagamento no valor de R$ 000,00 foi aprovado.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <div class="overlay overlay-close"></div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/modules/jquery.matchHeight-min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

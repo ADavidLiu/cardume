@@ -16,8 +16,23 @@
     @include atLarge {
         padding-top: 3.5rem;
     }
+    &--alt {
+        padding-top: 1rem;
+        @include atSmall {
+            padding-top: 1rem;
+        }
+        @include atMedium {
+            padding-top: 1rem;
+        }
+        @include atLarge {
+            padding-top: 1rem;
+        }
+        @include atExtralarge {
+            padding-top: 1rem;
+        }
+    }
     &__row {
-        & + & {
+        &+& {
             margin-top: 5rem;
             @include atSmall {
                 margin-top: 3.75rem;
@@ -26,6 +41,21 @@
         @include atSmall {
             display: flex;
             justify-content: space-between;
+        }
+        &--title {
+            margin-bottom: 2.25rem;
+            @include atSmall {
+                margin-bottom: 1.6875rem;
+            }
+        }
+        &--alt {
+            margin-top: 0;
+            &+& {
+                margin-top: 3.3333rem;
+                @include atSmall {
+                    margin-top: 2.5rem;
+                }
+            }
         }
     }
 }
