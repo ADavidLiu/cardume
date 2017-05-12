@@ -94,6 +94,7 @@ textarea {
     8. TITLE
     9. EQUIPMENT
     10. STATUS
+    11. DADOS-CADASTRAIS
 
 */
 /*------------- 1. HEADER -------------*/
@@ -336,7 +337,7 @@ textarea {
     border-radius: 5px;
     color: #ffffff;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.8333rem;
     height: 5rem;
     width: 100%;
     margin-top: 1.5rem; }
@@ -344,7 +345,7 @@ textarea {
       .sidebar__welcome-btn {
         margin-top: 1.125rem;
         height: 3.75rem;
-        font-size: 1.125rem; } }
+        font-size: 1.375rem; } }
   .sidebar__card {
     padding-left: 4.1667rem !important;
     padding-right: 4.1667rem !important;
@@ -866,11 +867,16 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem; }
+  .modal-dialog--small {
+    max-width: 705px;
+    margin: 0; }
 
 .modal-content {
   border: 0;
   box-shadow: none;
   border-radius: 0; }
+  .modal-content--rounded {
+    border-radius: 5px; }
 
 .modal__header {
   background-color: #1D6A8D;
@@ -1323,6 +1329,22 @@ textarea {
       color: rgba(155, 155, 155, 0.5); }
     .modal__help-message::placeholder {
       color: rgba(155, 155, 155, 0.5); }
+
+.modal__senha-content {
+  padding: 2rem 4rem 2rem 2rem; }
+
+.modal__senha-text {
+  font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+  font-size: 1.5rem;
+  color: #a4a4a4;
+  font-weight: 400; }
+  @media screen and (min-width: 768px) {
+    .modal__senha-text {
+      font-size: 1.125rem; } }
+  .modal__senha-text--pink {
+    color: #FA216A; }
+  .modal__senha-text--accent {
+    font-weight: 700; }
 
 /*------------- 8. TITLE -------------*/
 .title {
@@ -1812,3 +1834,363 @@ textarea {
           margin-bottom: 1rem; }
         .status__timeline-item-text--accent {
           color: #636466; }
+
+/*------------- 11. DADOS-CADASTRAIS -------------*/
+.dados-cadastrais {
+  position: relative;
+  padding-top: 5rem; }
+  @media screen and (min-width: 768px) {
+    .dados-cadastrais {
+      padding-top: 3.75rem; } }
+  .dados-cadastrais__header {
+    padding: 1.6667rem;
+    text-align: center;
+    width: 80%;
+    max-width: 270px;
+    background-color: #1D6A8D;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 0;
+    left: 1.6667rem; }
+    @media screen and (min-width: 768px) {
+      .dados-cadastrais__header {
+        padding: 1.25rem;
+        left: 1.25rem; } }
+    .dados-cadastrais__header-title {
+      font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+      color: #ffffff;
+      font-size: 2rem;
+      font-weight: 400; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__header-title {
+          font-size: 1.5rem; } }
+  .dados-cadastrais__content {
+    max-width: 950px;
+    margin: 0 auto; }
+  .dados-cadastrais__group, .dados-cadastrais__tab {
+    position: relative; }
+    .dados-cadastrais__group + .dados-cadastrais__group, .dados-cadastrais__tab + .dados-cadastrais__group, .dados-cadastrais__group + .dados-cadastrais__tab, .dados-cadastrais__tab + .dados-cadastrais__tab {
+      margin-top: 3.3333rem; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__group + .dados-cadastrais__group, .dados-cadastrais__tab + .dados-cadastrais__group, .dados-cadastrais__group + .dados-cadastrais__tab, .dados-cadastrais__tab + .dados-cadastrais__tab {
+          margin-top: 2.5rem; } }
+    .dados-cadastrais__group-header, .dados-cadastrais__tab-header {
+      border-bottom: 1px solid #BDC5C8;
+      margin-bottom: 1.6667rem; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__group-header, .dados-cadastrais__tab-header {
+          font-size: 1.125rem;
+          margin-bottom: 1.25rem; } }
+    .dados-cadastrais__group-title, .dados-cadastrais__tab-title {
+      font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+      font-size: 1.5rem;
+      color: #a4a4a4;
+      font-weight: 400;
+      padding-bottom: 0.5rem; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__group-title, .dados-cadastrais__tab-title {
+          font-size: 1.125rem; } }
+  .dados-cadastrais__tab-header {
+    margin-bottom: 2.6667rem; }
+    @media screen and (min-width: 768px) {
+      .dados-cadastrais__tab-header {
+        margin-bottom: 2rem; } }
+  .dados-cadastrais__tab-title {
+    display: inline-block;
+    padding-bottom: 1rem;
+    cursor: pointer; }
+    @media screen and (min-width: 768px) {
+      .dados-cadastrais__tab-title {
+        padding-bottom: 0.625rem; } }
+    .dados-cadastrais__tab-title:not(:last-child) {
+      margin-right: 2rem; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__tab-title:not(:last-child) {
+          margin-right: 3.75rem; } }
+    .dados-cadastrais__tab-title--active {
+      border-bottom: 4px solid #FD9D11; }
+  .dados-cadastrais__title {
+    font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+    font-size: 1.8333rem;
+    color: #1D6A8D;
+    font-weight: 700; }
+    @media screen and (min-width: 768px) {
+      .dados-cadastrais__title {
+        font-size: 1.375rem; } }
+  .dados-cadastrais__pair {
+    margin-top: 1rem; }
+    .dados-cadastrais__pair-title {
+      font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+      font-weight: 700;
+      color: #a4a4a4;
+      font-size: 1.5rem; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__pair-title {
+          font-size: 1.125rem; } }
+      .dados-cadastrais__pair-title--accent {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        display: inline-block;
+        color: #69B25D; }
+    .dados-cadastrais__pair-value {
+      font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+      color: #BDC5C8;
+      font-weight: 400;
+      padding: 0;
+      font-size: 1.333rem;
+      border: 0;
+      background-color: transparent;
+      padding: 0.5rem 1rem; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__pair-value {
+          font-size: 1rem;
+          display: inline-block; } }
+      .dados-cadastrais__pair-value::-webkit-input-placeholder {
+        color: #BDC5C8; }
+      .dados-cadastrais__pair-value::-moz-placeholder {
+        color: #BDC5C8; }
+      .dados-cadastrais__pair-value:-ms-input-placeholder {
+        color: #BDC5C8; }
+      .dados-cadastrais__pair-value::placeholder {
+        color: #BDC5C8; }
+      .dados-cadastrais__pair-value--edit {
+        outline: none;
+        background-color: #f7f7f7;
+        color: #8F9091;
+        padding-right: 6rem; }
+      .dados-cadastrais__pair-value--incorrect {
+        border-bottom: 1px solid #FA216A; }
+    .dados-cadastrais__pair-btns {
+      display: inline-block;
+      margin-right: 0.3rem;
+      margin-left: 0.3rem; }
+      .dados-cadastrais__pair-btns-confirm, .dados-cadastrais__pair-btns-cancel {
+        cursor: pointer; }
+    .dados-cadastrais__pair-info {
+      display: inline-block; }
+      .dados-cadastrais__pair-info-label {
+        font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+        font-size: 1.16667rem;
+        font-weight: 400;
+        color: #69B25D; }
+        @media screen and (min-width: 768px) {
+          .dados-cadastrais__pair-info-label {
+            font-size: 0.875rem; } }
+        .dados-cadastrais__pair-info-label--error {
+          color: #FA216A; }
+    .dados-cadastrais__pair-edit {
+      cursor: pointer; }
+      .dados-cadastrais__pair-edit-icon {
+        max-height: 12px;
+        width: auto; }
+  .dados-cadastrais__btn {
+    height: 4rem;
+    max-width: 188px;
+    background-color: #69B25D;
+    font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+    color: #ffffff;
+    font-size: 1.8333rem;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0 3.625rem;
+    margin-top: 1.5rem; }
+    @media screen and (min-width: 768px) {
+      .dados-cadastrais__btn {
+        height: 3rem;
+        font-size: 1.375rem; } }
+    .dados-cadastrais__btn + span {
+      display: block;
+      margin-top: 1rem; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__btn + span {
+          margin-top: 0;
+          margin-left: 0.5rem;
+          display: inline-block; } }
+      @media screen and (min-width: 992px) {
+        .dados-cadastrais__btn + span {
+          margin-left: 1rem; } }
+  .dados-cadastrais__editar-foto {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    margin-bottom: 1rem; }
+    @media screen and (min-width: 768px) {
+      .dados-cadastrais__editar-foto {
+        margin-bottom: 0;
+        position: absolute;
+        top: 0;
+        right: 0; } }
+    .dados-cadastrais__editar-foto-img {
+      border-radius: 5px;
+      max-height: 155px;
+      max-width: 100%; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__editar-foto-img {
+          max-height: 100px; } }
+      @media screen and (min-width: 992px) {
+        .dados-cadastrais__editar-foto-img {
+          max-height: 125px; } }
+      @media screen and (min-width: 1200px) {
+        .dados-cadastrais__editar-foto-img {
+          max-height: 155px; } }
+    .dados-cadastrais__editar-foto-text {
+      font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+      font-weight: 700;
+      color: #1D6A8D;
+      font-size: 1.5rem;
+      margin-top: 1.3rem;
+      cursor: pointer; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__editar-foto-text {
+          margin-top: 1rem;
+          font-size: 1.125rem; } }
+  .dados-cadastrais__footer {
+    position: relative; }
+  .dados-cadastrais__modal {
+    position: absolute;
+    z-index: 999999999999;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    opacity: 0;
+    transition: all 0.25s;
+    pointer-events: none; }
+    .dados-cadastrais__modal--active {
+      opacity: 1;
+      pointer-events: all; }
+  .dados-cadastrais__upload-wrapper {
+    background-color: #f7f7f7;
+    border: 2px dashed #a4a4a4;
+    padding: 3.1667rem; }
+    @media screen and (min-width: 768px) {
+      .dados-cadastrais__upload-wrapper {
+        padding: 2.5rem 3rem 3.5rem 3rem; } }
+  .dados-cadastrais__upload {
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center; }
+    .dados-cadastrais__upload-img {
+      max-width: 57px;
+      margin-bottom: 2.5rem; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__upload-img {
+          margin-bottom: 1.875rem; } }
+    .dados-cadastrais__upload-text {
+      font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+      font-size: 1.5rem;
+      color: #a4a4a4;
+      font-weight: 400; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__upload-text {
+          font-size: 1.125rem; } }
+      .dados-cadastrais__upload-text--accent {
+        color: #036E9A;
+        cursor: pointer; }
+  .dados-cadastrais__back {
+    font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+    font-size: 1.333rem;
+    font-weight: 400;
+    color: #036E9A;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 1.2rem; }
+    @media screen and (min-width: 768px) {
+      .dados-cadastrais__back {
+        font-size: 1rem;
+        margin-top: 1.875rem;
+        margin-bottom: 1rem; } }
+  .dados-cadastrais__anexos {
+    margin-top: 2.1667rem; }
+    @media screen and (min-width: 768px) {
+      .dados-cadastrais__anexos {
+        margin-top: 1.625rem; } }
+    .dados-cadastrais__anexos-title {
+      font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+      font-size: 1.5rem;
+      color: #036E9A;
+      font-weight: 400;
+      margin-bottom: 1.667rem; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__anexos-title {
+          font-size: 1.125rem;
+          margin-bottom: 1rem; } }
+    .dados-cadastrais__anexos-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #BDC5C8; }
+      @media screen and (min-width: 768px) {
+        .dados-cadastrais__anexos-item {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center; } }
+      .dados-cadastrais__anexos-item-column {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; }
+        @media screen and (min-width: 768px) {
+          .dados-cadastrais__anexos-item-column {
+            padding: 0;
+            width: 25%;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center; } }
+        .dados-cadastrais__anexos-item-column + .dados-cadastrais__anexos-item-column {
+          margin-top: 1rem; }
+          @media screen and (min-width: 768px) {
+            .dados-cadastrais__anexos-item-column + .dados-cadastrais__anexos-item-column {
+              margin-top: 0; } }
+        .dados-cadastrais__anexos-item-column--remove {
+          cursor: pointer; }
+        @media screen and (min-width: 768px) {
+          .dados-cadastrais__anexos-item-column:first-child {
+            -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+            justify-content: flex-start; } }
+        @media screen and (min-width: 768px) {
+          .dados-cadastrais__anexos-item-column:last-child {
+            -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+            justify-content: flex-end; } }
+      .dados-cadastrais__anexos-item-text {
+        display: inline-block;
+        font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+        color: #636466;
+        font-weight: 400;
+        font-size: 1.333rem; }
+        @media screen and (min-width: 768px) {
+          .dados-cadastrais__anexos-item-text {
+            font-size: 1rem; } }
+        .dados-cadastrais__anexos-item-text + img {
+          margin-left: 1rem; }
+      .dados-cadastrais__anexos-item-img {
+        max-height: 26px;
+        width: auto; }
+        .dados-cadastrais__anexos-item-img + h3 {
+          margin-left: 1rem; }
+      .dados-cadastrais__anexos-item-subtitle {
+        font-family: "Cabin", "Helvetica", "Arial", sans-serif;
+        color: #BDC5C8;
+        font-size: 1.1667rem;
+        font-weight: 400; }
+        @media screen and (min-width: 768px) {
+          .dados-cadastrais__anexos-item-subtitle {
+            font-size: 0.875rem; } }
+        .dados-cadastrais__anexos-item-subtitle--alt {
+          text-transform: uppercase; }

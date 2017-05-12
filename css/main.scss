@@ -26,6 +26,7 @@
     8. TITLE
     9. EQUIPMENT
     10. STATUS
+    11. DADOS-CADASTRAIS
 
 */
 
@@ -78,3 +79,8 @@
 /*------------- 10. STATUS -------------*/
 
 @import "modules/_status.scss";
+
+
+/*------------- 11. DADOS-CADASTRAIS -------------*/
+
+@import "modules/_dados-cadastrais.scss";

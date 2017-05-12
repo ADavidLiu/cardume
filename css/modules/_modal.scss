@@ -5,11 +5,18 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 5rem;
+        &--small {
+            max-width: 705px;
+            margin: 0;
+        }
     }
     &-content {
         border: 0;
         box-shadow: none;
         border-radius: 0;
+        &--rounded {
+            border-radius: 5px;
+        }
     }
     &__header {
         background-color: $brand;
@@ -503,6 +510,26 @@
             }
             &::placeholder {
                 color: rgba(155, 155, 155, 0.5);
+            }
+        }
+    }
+    &__senha {
+        &-content {
+            padding: 2rem 4rem 2rem 2rem;
+        }
+        &-text {
+            font-family: $main;
+            font-size: 1.5rem;
+            color: $text-dados;
+            font-weight: 400;
+            @include atSmall {
+                font-size: 1.125rem;
+            }
+            &--pink {
+                color: $accent-pink;
+            }
+            &--accent {
+                font-weight: 700;
             }
         }
     }
