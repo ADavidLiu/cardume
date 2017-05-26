@@ -1,5 +1,11 @@
 /*------------- BASE IMPORT -------------*/
 @import url("https://fonts.googleapis.com/css?family=Cabin:400,500,600,700");
+@font-face {
+  font-family: 'password';
+  src: url("../fonts/password.woff2") format("woff2"), url("../fonts/password.woff") format("woff"), url("../fonts/password.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 html,
 body {
   overflow-x: hidden;
@@ -1956,10 +1962,11 @@ textarea {
       .dados-cadastrais__pair-value::placeholder {
         color: #BDC5C8; }
       .dados-cadastrais__pair-value--edit {
-        outline: none;
         background-color: #f7f7f7;
         color: #8F9091;
         padding-right: 6rem; }
+      .dados-cadastrais__pair-value--password {
+        font-family: "password" !important; }
       .dados-cadastrais__pair-value--incorrect {
         border-bottom: 1px solid #FA216A; }
     .dados-cadastrais__pair-btns {

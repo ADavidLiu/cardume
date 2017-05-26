@@ -128,10 +128,12 @@
                 color: $dados-border;
             }
             &--edit {
-                outline: none;
                 background-color: $dados-focus;
                 color: $dados-focus-text;
                 padding-right: 6rem;
+            }
+            &--password {
+                font-family: $password !important;
             }
             &--incorrect {
                 border-bottom: 1px solid $accent-pink;

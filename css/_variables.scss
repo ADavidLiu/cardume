@@ -3,6 +3,17 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700');
 $main: "Cabin", "Helvetica", "Arial", sans-serif;
 
+@font-face {
+  font-family: 'password';
+  src: url('../fonts/password.woff2') format('woff2'),
+       url('../fonts/password.woff') format('woff'),
+       url('../fonts/password.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$password: "password";
+
 // Colors
 
 $brand: #1D6A8D;
