@@ -1,0 +1,459 @@
+.consultar {
+    &__saldo-wrapper {
+        text-align: left;
+        width: 80%;
+        max-width: 206px;
+        padding: 2.1667rem 3.1667rem 1.75rem 2.333rem;
+        background-color: $white;
+        @include atSmall {
+            text-align: right;
+            padding: 1.625rem 1.75rem 1.3125rem 2.375rem;
+            position: absolute;
+            top: 0;
+            right: 1.25rem;
+            transform: translateY(-33%);
+        }
+        @include atMedium {
+            right: 2.25rem;
+        }
+    }
+    &__saldo {
+        font-family: $main;
+        font-weight: 400;
+        color: $accent-green;
+        font-size: 2.41667rem;
+        @include atSmall {
+            font-size: 1.8125rem;
+        }
+        &-cents {
+            font-size: 1.41667rem;
+            @include atSmall {
+                font-size: 1.0625rem;
+            }
+        }
+        &-label {
+            font-size: 1.5833rem;
+            @include atSmall {
+                font-size: 1.1875rem;
+            }
+        }
+        &-title {
+            font-family: $main;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #979797;
+            @include atSmall {
+                font-size: 1.125rem;
+            }
+        }
+    }
+    &__periodo {
+        margin: 1.666rem 0 1.58333rem 0;
+        position: relative;
+        @include atSmall {
+            margin: 0 0 1.6875rem 0;
+        }
+        &-item {
+            cursor: pointer;
+            border: 1px solid $accent-orange;
+            border-radius: 5px;
+            display: inline-block;
+            min-width: 102px;
+            padding: 6px 15px;
+            text-align: center;
+            font-family: $main;
+            font-size: 1.1667rem;
+            font-weight: 700;
+            color: $text;
+            margin-bottom: 1rem;
+            position: relative;
+            @include atSmall {
+                font-size: 0.875rem;
+            }
+            &--active {
+                color: $white;
+                background-color: $accent-orange;
+            }
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+    &__calendars {
+        background-color: $white;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 9;
+        bottom: 0;
+        left: 0;
+        transform: translateY(105%);
+        @include atMedium {
+            transform: translateY(110%);
+            right: 0;
+            left: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__calendar {
+        padding: 1.667rem;
+        width: 225px;
+        cursor: default;
+        @include atSmall {
+            padding: 1.25rem;
+        }
+        &+& {
+            border-top: 1px solid #E7E7E7;
+            @include atMedium {
+                border-left: 1px solid #E7E7E7;
+                border-top: 0;
+            }
+        }
+        &-title {
+            font-family: $main;
+            color: $text;
+            font-weight: 700;
+            font-size: 1.1667rem;
+            cursor: text;
+            @include atSmall {
+                font-size: 0.875rem;
+            }
+        }
+        &-selection {
+            margin: 1.333rem auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include atSmall {
+                margin: 1rem auto;
+            }
+        }
+        &-arrow {
+            height: 1rem;
+            width: auto;
+            cursor: pointer;
+            &--prev {
+                margin-right: 0.8333rem;
+                @include atSmall {
+                    margin-right: 0.625rem;
+                }
+            }
+            &--next {
+                transform: scaleX(-1);
+                margin-left: 0.8333rem;
+                @include atSmall {
+                    margin-left: 0.625rem;
+                }
+            }
+        }
+        &-dropdown {
+            border: 0.75px solid #D1D1D1;
+            appearance: none;
+            border-radius: 0;
+            width: 4.1667rem;
+            text-align: center;
+            text-align-last: center;
+            font-family: $main;
+            font-weight: 400;
+            color: #9B9B9B;
+            font-size: 1rem;
+            background-image: url("../images/calendar-dropdown-arrow.png");
+            background-repeat: no-repeat;
+            background-position: calc(100% - 3px) center;
+            background-size: auto 3px;
+            @include atSmall {
+                width: 3.125rem;
+                font-size: 0.75rem;
+            }
+            &+& {
+                margin-left: 3px;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        &-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &+& {
+                margin-top: 0.5rem;
+            }
+        }
+        &-dates {
+            width: 100%;
+        }
+        &-label {
+            position: relative;
+            z-index: 2;
+        }
+        &-text {
+            width: 14.28%;
+            font-family: $main;
+            color: $text;
+            font-size: 0.91667rem;
+            font-weight: 400;
+            cursor: pointer;
+            @include atSmall {
+                font-size: 0.6875rem;
+            }
+            &--accent {
+                font-weight: 700;
+                cursor: text;
+            }
+            &--alt {
+                color: $text-alt-dark;
+            }
+            &--selected {
+                position: relative;
+                color: $white;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    border-radius: 100%;
+                    z-index: 1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: $accent-orange;
+                    width: 2.1667rem;
+                    height: 2.1667rem;
+                    @include atSmall {
+                        width: 1.625rem;
+                        height: 1.625rem;
+                    }
+                }
+            }
+        }
+    }
+    &__table-wrapper {
+        overflow: scroll;
+        width: 100%;
+    }
+    &__table {
+        min-width: 100%;
+        &-row {
+            border-bottom: 1px solid #E6E6E6;
+            &--title {
+                border-bottom: 2px solid #E6E6E6;
+            }
+        }
+        &-data {
+            text-align: left;
+            font-family: $alt;
+            font-weight: 400;
+            color: $text-alt-dark;
+            font-size: 1.1667rem;
+            vertical-align: middle;
+            padding: 2.08333rem 2.333rem 2.08333rem 0;
+            @include atSmall {
+                font-size: 0.875rem;
+                padding: 1.5625rem 1.75rem 1.5625rem 0;
+            }
+            &--title {
+                font-family: $main;
+                font-weight: 700;
+                color: $text;
+                padding-top: 0;
+                padding-bottom: 1rem;
+                @include atSmall {
+                    padding-bottom: 0.75rem;
+                }
+            }
+            &--alt {
+                font-family: $main;
+                font-weight: 400;
+                color: $text;
+            }
+            &--icon {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                cursor: pointer;
+            }
+            &--actions {
+                color: $text-alt-dark;
+                font-family: $main;
+                font-weight: 400;
+                min-width: 195px;
+            }
+        }
+        &-icon {
+            max-width: 26px;
+            height: auto;
+            display: inline-block;
+            margin-left: 0.5rem;
+            cursor: pointer;
+            &--small {
+                max-width: 13px;
+            }
+        }
+        &-cancel {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 0.8rem;
+            cursor: pointer;
+            transform: translateY(2px);
+            img {
+                margin-right: 0.3rem;
+            }
+        }
+    }
+    &__footer {
+        margin-top: 1.6667rem;
+        @include atSmall {
+            margin-top: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__actions {
+        @include atSmall {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 50%;
+            max-width: 222px;
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            &+& {
+                margin-top: 1rem;
+                @include atSmall {
+                    margin: 0;
+                }
+            }
+        }
+        &-icon {
+            height: 1rem;
+            width: auto;
+        }
+        &-label {
+            font-family: $main;
+            font-weight: 400;
+            color: $text;
+            font-size: 1.1667rem;
+            margin-left: 1.0833rem;
+            @include atSmall {
+                font-size: 0.875rem;
+                margin-left: 0.8125rem;
+            }
+        }
+    }
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        @include atSmall {
+            justify-content: flex-end;
+            margin-top: 0;
+            width: 50%;
+            max-width: 200px;
+        }
+        &-input {
+            width: 4.667rem;
+            box-shadow: 0 1px 1px rgba(221, 221, 221, 0.5);
+            border: 1px solid #E5E5E5;
+            text-align: center;
+            font-family: $alt;
+            font-size: 1.1667rem;
+            color: $text;
+            height: 3rem;
+            @include atSmall {
+                font-size: 0.875rem;
+                width: 3.5rem;
+                height: 2.25rem;
+            }
+        }
+        &-numbers {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-total {
+            height: 3rem;
+            font-family: $alt;
+            font-size: 1.1667rem;
+            line-height: 3rem;
+            color: $text;
+            padding: 0 0.5rem;
+            @include atSmall {
+                line-height: 2.25rem;
+                height: 2.25rem;
+                font-size: 0.875rem;
+            }
+            &-number {
+                color: #1D96C7;
+            }
+        }
+        &-arrow-wrapper {
+            background-color: #F9F9F9;
+            border: 1px solid #BBBBBB;
+            height: 3rem;
+            width: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            @include atSmall {
+                height: 2.25rem;
+                width: 2.25rem;
+            }
+            &--prev {
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+            &--next {
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+        }
+        &-arrow {
+            width: 7px;
+            height: auto;
+        }
+    }
+    .triangle {
+        position: absolute;
+        z-index: -1;
+        background-color: $white;
+        text-align: left;
+        top: -0.2rem;
+        left: 4rem;
+        cursor: default;
+        transform: rotate(-60deg) skewX(-30deg) scale(1, .866);
+        @include atSmall {
+            left: 3rem;
+        }
+        @include atMedium {
+            left: auto;
+            right: 3rem;
+        }
+    }
+    .triangle:before,
+    .triangle:after {
+        content: '';
+        position: absolute;
+        background-color: inherit;
+    }
+    .triangle,
+    .triangle:before,
+    .triangle:after {
+        width: 2rem;
+        height: 2rem;
+        border-top-right-radius: 30%;
+    }
+    .triangle {
+    }
+    .triangle:before {
+        transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+    }
+    .triangle:after {
+        transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+    }
+}

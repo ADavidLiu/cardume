@@ -5,6 +5,9 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 5rem;
+        &--medium {
+            max-width: 805px;
+        }
         &--small {
             max-width: 705px;
             margin: 0;
@@ -376,10 +379,14 @@
             padding: 3.875rem 2rem 3.4375rem 2rem;
             display: flex;
             justify-content: center;
-        }
-        @include atSmall {
-            display: flex;
             align-items: center;
+        }
+        &--alt {
+            display: block;
+            padding: 2.667rem 2.667rem 4.5833rem 2.667rem;
+            @include atSmall {
+                padding: 2rem 2rem 3.4375rem 2rem;
+            }
         }
         &-img {
             margin: 0 auto;
@@ -441,10 +448,20 @@
         &-confirmed {
             text-align: center;
             display: none;
+            &--template {
+                display: block;
+            }
+            &--left {
+                text-align: left;
+            }
             &-img {
                 width: 8rem;
                 height: auto;
                 margin: 0 auto;
+                &--alt {
+                    max-height: 110px;
+                    width: auto;
+                }
             }
             &-title {
                 font-family: $main;
@@ -454,6 +471,26 @@
                 margin: 3.75rem 0 1rem 0;
                 @include atSmall {
                     font-size: 1.25rem;
+                }
+                &--alt {
+                    color: $accent-pink;
+                }
+                &--big {
+                    font-size: 2.08333rem;
+                    margin-top: 0;
+                    margin-bottom: 2.75rem;
+                    @include atSmall {
+                        font-size: 1.5625rem;
+                        margin-bottom: 2.0625rem;
+                    }
+                }
+                &--margineq {
+                    margin: 3.333rem 0 2.91667rem 0;
+                    font-size: 1.6rem;
+                    @include atSmall {
+                        margin: 2.5rem 0 2.1875rem 0;
+                        font-size: 1.2rem;
+                    }
                 }
             }
             &-subtitle {
@@ -465,6 +502,133 @@
                 @include atSmall {
                     font-size: 1.125rem;
                 }
+                &--alt {
+                    color: $text;
+                    margin-bottom: 0;
+                    line-height: 1.8333rem;
+                    @include atSmall {
+                        line-height: 1.375rem;
+                    }
+                    &+& {
+                        margin-top: 2.75rem;
+                        @include atSmall {
+                            margin-top: 2.0625rem;
+                        }
+                    }
+                }
+                &--small {
+                    font-size: 1.333rem;
+                    @include atSmall {
+                        font-size: 1rem;
+                    }
+                }
+            }
+            &-link {
+                font-weight: 700;
+                color: $link;
+                @include linkStates($link,
+                none);
+            }
+        }
+        &-code {
+            margin: 0.8333rem 0 3.333rem 0;
+            @include atSmall {
+                margin: 0.625rem 0 2.5rem 0;
+            }
+            &-input {
+                width: 100%;
+                max-width: 103px;
+                background-color: #F4F4F4;
+                border-bottom: 1px solid #979797;
+                font-family: $main;
+                font-weight: 400;
+                color: #D8D8D8;
+                font-size: 2.5833rem;
+                text-align: center;
+                margin-right: 0.8333rem;
+                @include atSmall {
+                    font-size: 1.8375rem;
+                    margin-right: 0.625rem;
+                }
+                &::placeholder {
+                    color: #D8D8D8;
+                }
+                &--error {
+                    border-color: $accent-pink;
+                }
+            }
+            &-label {
+                color: $accent-pink;
+                font-family: $main;
+                font-weight: 400;
+                font-size: 1.333rem;
+                @include atSmall {
+                    font-size: 1rem;
+                }
+            }
+        }
+        &-list {
+            margin: 2.75rem 0 3.33rem 0;
+            @include atSmall {
+                margin: 2.0625rem 0 2.5rem 0;
+            }
+        }
+        &-check {
+            font-family: $main;
+            color: $text;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding-left: 2.91667rem;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 1.833rem;
+                height: 1.833rem;
+                border: 1px solid #9B9B9B;
+                cursor: pointer;
+                @include atSmall {
+                    width: 1.375rem;
+                    height: 1.375rem;
+                }
+            }
+            @include atSmall {
+                font-size: 1.125rem;
+                padding-left: 2.1875rem;
+            }
+            &+& {
+                margin-top: 1.1667rem;
+                @include atSmall {
+                    margin-top: 0.875rem;
+                }
+            }
+            &-input {
+                width: 50%;
+                max-width: 244px;
+                background-color: #F4F4F4;
+                border-bottom: 1px solid #979797;
+                font-family: $main;
+                font-weight: 400;
+                color: #D8D8D8;
+                font-size: 1.333rem;
+                text-align: left;
+                padding: 0 0.5rem;
+                margin-left: 0.5rem;
+                @include atSmall {
+                    font-size: 1rem;
+                }
+                &::placeholder {
+                    color: #D8D8D8;
+                }
+            }
+        }
+        &-table {
+            margin: 2.5rem 0;
+            @include atSmall {
+                margin: 1.875rem 0;
             }
         }
         &-info {
@@ -475,8 +639,16 @@
                 }
             }
         }
+        &-btns {
+            &--margin {
+                margin-top: 3.08333rem;
+                @include atSmall {
+                    margin-top: 2.3125rem;
+                }
+            }
+        }
         &-btn {
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
             height: 4rem;
             border-radius: 5px;
             width: 45%;
@@ -484,12 +656,28 @@
             color: $white;
             font-size: 1.667rem;
             font-weight: 400;
+            background-color: $icon-bg-gray;
             @include atSmall {
                 font-size: 1.25rem;
                 height: 3.5rem;
             }
+            &--alt {
+                max-width: 185px;
+            }
+            &--nomodal {
+                width: 100%;
+            }
             &--brand {
                 background-color: $brand;
+            }
+            &--green {
+                background-color: $accent-green;
+            }
+            &--pink {
+                background-color: $accent-pink;
+            }
+            & + & {
+                margin-left: 10px;
             }
         }
         &-message {

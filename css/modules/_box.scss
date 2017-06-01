@@ -15,7 +15,7 @@
         @include atSmall {
             width: 33.33%;
         }
-        & + & {
+        &+& {
             margin-top: 8.5rem;
             @include atSmall {
                 margin-left: 20px;
@@ -282,6 +282,62 @@
             font-weight: 400;
             @include atSmall {
                 font-size: 1rem;
+            }
+        }
+    }
+    &--consultar {
+        position: relative;
+        &__title-wrapper {
+            background-color: $accent-orange;
+            padding: 1.6667rem;
+            text-align: left;
+            width: 80%;
+            max-width: 230px;
+            transform: translateY(calc(-50% - 1.6667rem));
+            margin-bottom: -2rem;
+            @include atSmall {
+                padding: 1.25rem;
+                transform: translateY(calc(-50% - 1.25rem));
+                margin-bottom: 0;
+            }
+        }
+        &__title {
+            font-family: $main;
+            font-weight: 400;
+            font-size: 2rem;
+            color: $white;
+            @include atSmall {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &--anticipation {
+        position: relative;
+        &__title-wrapper {
+            background-color: $accent-orange;
+            padding: 1.6667rem;
+            text-align: left;
+            width: 80%;
+            max-width: 313px;
+            transform: translateY(calc(-50% - 1.6667rem));
+            margin-bottom: -2rem;
+            @include atSmall {
+                text-align: center;
+                padding: 1.25rem;
+                transform: translateY(calc(-50% - 1.25rem));
+                margin-bottom: 0;
+            }
+            @include atMedium {
+                margin-bottom: -5rem;
+            }
+        }
+        &__title {
+            font-family: $main;
+            font-weight: 400;
+            font-size: 2rem;
+            color: $white;
+            @include atSmall {
+                font-size: 1.5rem;
             }
         }
     }

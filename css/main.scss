@@ -27,6 +27,8 @@
     9. EQUIPMENT
     10. STATUS
     11. DADOS-CADASTRAIS
+    12. CONSULTAR
+    13. ANTICIPATION
 
 */
 
@@ -84,3 +86,13 @@
 /*------------- 11. DADOS-CADASTRAIS -------------*/
 
 @import "modules/_dados-cadastrais.scss";
+
+
+/*------------- 12. CONSULTAR -------------*/
+
+@import "modules/_consultar.scss";
+
+
+/*------------- 13. ANTICIPATION -------------*/
+
+@import "modules/_anticipation.scss";
