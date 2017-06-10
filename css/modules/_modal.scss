@@ -5,6 +5,9 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 5rem;
+        &--large {
+            max-width: 927px;
+        }
         &--medium {
             max-width: 805px;
         }
@@ -676,7 +679,7 @@
             &--pink {
                 background-color: $accent-pink;
             }
-            & + & {
+            &+& {
                 margin-left: 10px;
             }
         }
@@ -718,6 +721,997 @@
             }
             &--accent {
                 font-weight: 700;
+            }
+        }
+    }
+    &__pedido {
+        padding: 0;
+        @include atSmall {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        &-img {
+            margin: 0 auto;
+            @include atSmall {
+                margin: 0;
+                display: inline-block;
+            }
+        }
+        &-copy {
+            text-align: left;
+            margin-top: 3rem;
+            @include atSmall {
+                width: 55%;
+                margin-top: 0;
+            }
+        }
+        &-title {
+            font-family: $main;
+            color: $accent-orange;
+            font-size: 2.08333rem;
+            font-weight: 400;
+            @include atSmall {
+                font-size: 1.5625rem;
+            }
+            &--alt {
+                margin-bottom: 0;
+            }
+        }
+        &-text,
+        &-confirmed {
+            font-family: $main;
+            font-size: 1.333rem;
+            color: $text;
+            font-weight: 400;
+            @include atSmall {
+                font-size: 1rem;
+            }
+            &--light {
+                color: $text-alt-dark;
+                font-size: 1.1667rem;
+                @include atSmall {
+                    font-size: 0.875rem;
+                }
+            }
+            &--big {
+                font-size: 1.5rem;
+                margin: 2.667rem 0 1.333rem 0;
+                @include atSmall {
+                    margin: 2rem 0 1rem 0;
+                    font-size: 1.125rem;
+                }
+            }
+        }
+        &-confirmed {
+            text-align: center;
+            display: none;
+            padding: 4.5rem 2rem 0 2rem;
+            @include atSmall {
+                padding: 3.875rem 0 0 0;
+            }
+            &--template {
+                display: block;
+            }
+            &--flex {
+                width: 100%;
+                @include atSmall {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+            &-img {
+                width: 8rem;
+                height: auto;
+                margin: 0 auto;
+                &--alt {
+                    max-height: 175px;
+                    width: auto;
+                }
+            }
+            &-title {
+                font-family: $main;
+                color: $accent-green;
+                font-size: 1.6667rem;
+                font-weight: 700;
+                margin: 3.75rem 0 1rem 0;
+                @include atSmall {
+                    font-size: 1.25rem;
+                }
+                &--alt {
+                    margin: 0;
+                }
+            }
+            &-subtitle {
+                font-family: $main;
+                color: $text-alt-dark;
+                font-size: 1.5rem;
+                line-height: 1.91667rem;
+                font-weight: 400;
+                margin-bottom: 4.125rem;
+                @include atSmall {
+                    line-height: 1.4375rem;
+                    font-size: 1.125rem;
+                }
+                &--small {
+                    font-size: 1.333rem;
+                    @include atSmall {
+                        font-size: 1rem;
+                    }
+                }
+                &--alt {
+                    margin: 1rem 0 0 0;
+                    &:last-of-type {
+                        margin-bottom: 1.375rem;
+                    }
+                }
+            }
+            &-link {
+                font-weight: 700;
+                color: $brand-alt;
+                @include linkStates($brand-alt,
+                none);
+            }
+            &-accent {
+                font-weight: 700;
+                font-size: 1.333rem;
+                color: $text;
+                @include atSmall {
+                    font-size: 1rem;
+                }
+            }
+        }
+        &-btns {
+            &--margin {
+                margin-top: 3.08333rem;
+                @include atSmall {
+                    margin-top: 2.3125rem;
+                }
+            }
+        }
+        &-btn {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+            height: 4rem;
+            border-radius: 5px;
+            width: 45%;
+            font-family: $main;
+            color: $white;
+            font-size: 1.667rem;
+            font-weight: 400;
+            background-color: $icon-bg-gray;
+            @include atSmall {
+                font-size: 1.25rem;
+                height: 3.5rem;
+            }
+            &--alt {
+                max-width: 123px;
+                font-size: 1.333rem;
+                height: 2.5rem;
+                padding: 0.41667rem 0.833rem;
+                @include atSmall {
+                    font-size: 1rem;
+                    height: 1.875rem;
+                    padding: 0.3125rem 0.625rem;
+                }
+            }
+            &--nomodal {
+                width: 100%;
+            }
+            &--brand {
+                background-color: $brand;
+            }
+            &--green {
+                background-color: $accent-green;
+            }
+            &--pink {
+                background-color: $accent-pink;
+            }
+            &--orange {
+                background-color: $accent-orange;
+            }
+            &+& {
+                margin-left: 10px;
+            }
+        }
+        &-header {
+            display: block;
+            width: 100%;
+            @include atSmall {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &-item {
+                text-align: center;
+                background-color: #F8F8F8;
+                border: 1px solid #D3D3D3;
+                cursor: pointer;
+                width: 100%;
+                padding: 2.0833rem 0;
+                @include atSmall {
+                    width: 30%;
+                    padding: 1.5625rem 0;
+                }
+                &:first-child {
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    @include atSmall {
+                        border-top-right-radius: 0;
+                    }
+                }
+                &:last-child {
+                    @include atSmall {
+                        border-top-right-radius: 5px;
+                    }
+                }
+                &:nth-child(2) {
+                    width: 100%;
+                    @include atSmall {
+                        width: 40%;
+                    }
+                }
+                &--active {
+                    border-bottom: 1px solid $accent-green;
+                    box-shadow: inset 0 -1px 0 0 $accent-green;
+                }
+                &-title {
+                    font-family: $main;
+                    font-size: 1.5rem;
+                    color: $text;
+                    font-weight: 400;
+                    opacity: 0.3;
+                    @include atSmall {
+                        font-size: 1.125rem;
+                    }
+                    &--active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &-pdf {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 1.375rem;
+            cursor: pointer;
+            &-icon {
+                margin-right: 1.667rem;
+                @include atSmall {
+                    margin-right: 1.25rem;
+                }
+            }
+            &-label {
+                font-family: $main;
+                font-size: 1.1667rem;
+                color: #BDC5C8;
+                font-weight: 400;
+                @include atSmall {
+                    font-size: 0.875rem;
+                }
+                &--accent {
+                    color: $text;
+                }
+            }
+        }
+        &-add {
+            font-family: $main;
+            width: 100%;
+            max-width: 790px;
+            margin: 0 auto;
+            padding: 0 2rem 4.58333rem 0;
+            @include atSmall {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                padding-bottom: 3.4375rem;
+            }
+            @include atMedium {
+                padding: 0 0 3.4375rem 0;
+            }
+            &-img {
+                max-width: 172px;
+                margin-bottom: 2rem;
+                @include atSmall {
+                    margin-bottom: 0;
+                    margin-right: 1.5625rem;
+                }
+            }
+            &-item {
+                width: 100%;
+                @include atSmall {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    width: 50%;
+                }
+                &+& {
+                    margin-top: 4rem;
+                    @include atSmall {
+                        margin-top: 0;
+                        margin-left: 3.75rem;
+                    }
+                }
+            }
+            &-content {
+                @include atSmall {
+                    width: 100%;
+                    max-width: 158px;
+                }
+            }
+            &-name {
+                text-align: left;
+                margin-bottom: 1.25rem;
+                @include atSmall {
+                    margin-bottom: 0.9375rem;
+                }
+            }
+            &-subtitle {
+                font-size: 1.1667rem;
+                line-height: 1.5rem;
+                color: $text;
+                font-weight: 400;
+                @include atSmall {
+                    font-size: 0.875rem;
+                    line-height: 1.125rem;
+                }
+            }
+            &-title {
+                font-size: 2.8333rem;
+                font-weight: 700;
+                color: $text;
+                @include atSmall {
+                    font-size: 2.125rem;
+                }
+                &--small {
+                    font-size: 2.0833rem;
+                    text-align: left;
+                    @include atSmall {
+                        font-size: 1.5625rem;
+                    }
+                }
+            }
+            &-operadora {
+                margin-bottom: 2rem;
+                display: block;
+                text-align: left;
+                @include atSmall {
+                    margin-bottom: 1.5rem;
+                }
+            }
+            &-dropdown {
+                display: inline-block;
+                margin-top: 0.5rem;
+                appearance: none;
+                background-color: transparent;
+                border: 1px solid #DAD9D9;
+                border-radius: 2px;
+                font-weight: 400;
+                min-width: 5rem;
+                height: 1.8333rem;
+                padding: 0 21px 0 11px;
+                background-image: url("../images/calendar-dropdown-arrow.png");
+                background-repeat: no-repeat;
+                background-position: calc(100% - 0.5rem) center;
+                background-size: 4px 2px;
+                @include atSmall {
+                    min-width: 3.75rem;
+                    height: 22px;
+                }
+                &:focus {
+                    outline: none;
+                }
+                &-item {
+                    font-family: $main;
+                    color: $text;
+                    font-size: 1.333rem;
+                    @include atSmall {
+                        font-size: 1rem;
+                    }
+                }
+            }
+            &-qty {
+                margin-bottom: 1.333rem;
+                text-align: center;
+                max-width: 93px;
+                @include atSmall {
+                    margin-bottom: 1rem;
+                }
+                &-counter {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                &-number {
+                    font-family: $main;
+                    color: $text;
+                    font-weight: 400;
+                    font-size: 2.5rem;
+                    @include atSmall {
+                        font-size: 1.875rem;
+                    }
+                }
+                &-reduce,
+                &-add {
+                    cursor: pointer;
+                    width: 1.5833rem;
+                    height: 1.5833rem;
+                    line-height: 1.3833rem;
+                    border-radius: 100%;
+                    background-color: $accent-orange;
+                    color: $white;
+                    font-family: $main;
+                    font-weight: 400;
+                    font-size: 2rem;
+                    @include atSmall {
+                        font-size: 1rem;
+                        width: 1.1875rem;
+                        height: 1.1875rem;
+                        line-height: 1.1rem;
+                    }
+                }
+            }
+            &-btn {
+                margin-top: 1.333rem;
+                @include atSmall {
+                    margin-top: 1rem;
+                }
+            }
+        }
+        &-message {
+            background-color: $accent-orange;
+            padding: 0.58333rem;
+            font-family: $main;
+            color: $white;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            @include atSmall {
+                padding: 0.5rem;
+            }
+            &-title {
+                font-weight: 700;
+                font-size: 1.5rem;
+                @include atSmall {
+                    font-size: 1.125rem;
+                }
+            }
+            &-cta {
+                font-size: 1.5rem;
+                color: $white;
+                font-weight: 400;
+                cursor: pointer;
+                margin: 1rem 0;
+                @include atSmall {
+                    margin: 0;
+                    font-size: 1.125rem;
+                    position: absolute;
+                    top: 50%;
+                    right: 2.1875rem;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        &-resumo {
+            padding: 2.5rem 2rem;
+            width: 100%;
+            max-width: 740px;
+            margin: 0 auto;
+            font-family: $main;
+            @include atSmall {
+                width: 82%;
+                padding: 2.1875rem 0;
+            }
+            &-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                border-bottom: 1px solid #E2E2E2;
+                padding-bottom: 1.667rem;
+                @include atSmall {
+                    padding-bottom: 1.25rem;
+                }
+            }
+            &-title {
+                color: $text;
+                font-weight: 700;
+                font-size: 1.5rem;
+                @include atSmall {
+                    font-size: 1.125rem;
+                }
+            }
+            &-logo {
+                max-height: 29px;
+                width: auto;
+            }
+            &-item {
+                padding: 1.667rem 0 1.667rem 2.08333rem;
+                border-bottom: 1px solid #E2E2E2;
+                @include atSmall {
+                    padding: 1.25rem 0 1.25rem 1.5625rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                &-info {
+                    width: 100%;
+                    @include atSmall {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 50%;
+                    }
+                }
+                &-copy {
+                    min-height: 45.5px;
+                    &+& {
+                        margin-top: 2rem;
+                        @include atSmall {
+                            margin-top: 0;
+                        }
+                    }
+                }
+                &-img {
+                    width: 50%;
+                    margin: 0 auto 2rem auto;
+                    height: auto;
+                    @include atSmall {
+                        margin: 0;
+                        max-width: 45px;
+                    }
+                }
+                &-label {
+                    color: $text;
+                    font-weight: 700;
+                    font-size: 1.1667rem;
+                    @include atSmall {
+                        font-size: 0.875rem;
+                    }
+                }
+                &-modelo {
+                    font-size: 2rem;
+                    color: $text;
+                    font-weight: 400;
+                    margin-top: 0.5rem;
+                    @include atSmall {
+                        font-size: 1.5rem;
+                    }
+                }
+                &-value {
+                    color: $text;
+                    font-size: 1.33rem;
+                    font-weight: 400;
+                    margin-top: 0.85rem;
+                    @include atSmall {
+                        font-size: 1rem;
+                    }
+                }
+                &-subtotal {
+                    margin-top: 2rem;
+                    @include atSmall {
+                        text-align: right;
+                        margin-top: 0;
+                    }
+                }
+                &-value {
+                    font-size: 1.667rem;
+                    color: $text;
+                    font-weight: 400;
+                    @include atSmall {
+                        font-size: 1.25rem;
+                    }
+                }
+                &-qty {
+                    display: inline-flex;
+                    align-items: stretch;
+                    justify-content: space-between;
+                    &-controls {
+                        margin-top: 0.85rem;
+                        margin-left: 0.5rem;
+                    }
+                    &-add,
+                    &-reduce {
+                        cursor: pointer;
+                        width: 6px;
+                        height: 3px;
+                        transform: translateY(5px);
+                    }
+                    &-reduce {
+                        transform: translateY(10px) scaleY(-1);
+                    }
+                }
+            }
+            &-footer {
+                padding-top: 1.5rem;
+                @include atSmall {
+                    padding-top: 1.125rem;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                }
+            }
+            &-total {
+                font-family: $main;
+                width: 100%;
+                margin-top: 2rem;
+                @include atSmall {
+                    margin-top: 0;
+                    width: 50%;
+                    text-align: right;
+                }
+                &-value {
+                    color: $brand-alt;
+                    font-size: 2.667rem;
+                    font-weight: 700;
+                    @include atSmall {
+                        font-size: 2rem;
+                    }
+                }
+                &-label {
+                    font-size: 1.167rem;
+                    color: $text;
+                    font-weight: 700;
+                    margin-right: 0.5rem;
+                    @include atSmall {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+            &-pagamento {
+                font-family: $main;
+                width: 100%;
+                @include atSmall {
+                    width: 50%;
+                }
+                &-label {
+                    font-size: 1.33rem;
+                    color: $text;
+                    font-weight: 700;
+                    @include atSmall {
+                        font-size: 1rem;
+                    }
+                }
+                &-items {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    margin-top: 2.0833rem;
+                    @include atSmall {
+                        margin-top: 1.5625rem;
+                    }
+                }
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 50%;
+                    max-width: 100px;
+                    &+& {
+                        margin-left: 2.1875rem;
+                    }
+                    &-check {
+                        border: 1px solid #979797;
+                        border-radius: 100%;
+                        height: 12px;
+                        width: 12px;
+                        cursor: pointer;
+                        position: relative;
+                        &--active {
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                background-color: $brand-alt;
+                                height: 6px;
+                                width: 6px;
+                                border-radius: 100%;
+                            }
+                        }
+                    }
+                    &-icon {
+                        max-width: 20px;
+                        height: auto;
+                    }
+                    &-label {
+                        font-size: 1.333rem;
+                        color: $text;
+                        font-weight: 400;
+                        @include atSmall {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+            &-actions {
+                margin-top: 2.5rem;
+                @include atSmall {
+                    margin-top: 1.875rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+            &-btn {
+                padding: 0 2.5rem;
+                display: block;
+                width: 100%;
+                @include atSmall {
+                    padding: 0 1.875rem;
+                    width: auto;
+                    display: inline-block;
+                }
+                &+& {
+                    margin-left: 0;
+                    margin-top: 1rem;
+                    @include atSmall {
+                        margin-left: auto;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        &-card {
+            padding: 2.5rem 2rem;
+            width: 100%;
+            max-width: 740px;
+            margin: 0 auto;
+            font-family: $main;
+            @include atSmall {
+                width: 82%;
+                padding: 2.1875rem 0;
+            }
+            &-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            &-method {
+                width: 60%;
+                max-width: 180px;
+                &-item {
+                    cursor: pointer;
+                    padding-bottom: 0.8333rem;
+                    @include atSmall {
+                        padding-bottom: 0.625rem;
+                    }
+                    &--active {
+                        box-shadow: inset 0 -2px 0 0 $accent-orange;
+                    }
+                }
+            }
+            &-logo {
+                max-height: 29px;
+                width: auto;
+                margin-bottom: 0.8333rem;
+                @include atSmall {
+                    margin-bottom: 0.625rem;
+                }
+            }
+            &-content {
+                margin-top: 2.91667rem;
+                @include atSmall {
+                    margin-top: 2.1875rem;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                }
+            }
+            &-img-wrapper {
+                margin-bottom: 1rem;
+                @include atSmall {
+                    width: 50%;
+                    margin-bottom: 0;
+                }
+            }
+            &-img {
+                width: 100%;
+            }
+            &-form {
+                width: 100%;
+                @include atSmall {
+                    width: 50%;
+                    margin-left: 2.1875rem;
+                }
+            }
+            &-group {
+                & + & {
+                    margin-top: 0.5rem;
+                }
+                &--flex {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .modal__pedido-card-input-wrapper {
+                        width: 50%;
+                        &--fourth {
+                            width: 25%;
+                        }
+                        &--full {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &-halves {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 50%;
+                .modal__pedido-card-input-wrapper {
+                    width: 50%;
+                    margin-left: 0.5rem;
+                    label {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    input {
+                        text-align: center;
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+            }
+            &-third {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 75%;
+                margin-left: 0.5rem;
+            }
+            &-input-wrapper {
+                height: 5.41667rem;
+                border: 1px solid #E0E0E0;
+                border-radius: 5px;
+                position: relative;
+                @include atSmall {
+                    height: 4.0625rem;
+                }
+                & + & {
+                    margin-left: 0.5rem;
+                }
+                &--active {
+                    border-color: $brand-alt;
+                }
+                &--error {
+                    border-color: $accent-pink;
+                }
+                &-bg {
+                    position: absolute;
+                    z-index: 7;
+                    right: 1.75rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 16px;
+                    width: 27px;
+                }
+            }
+            &-input {
+                position: absolute;
+                bottom: 0.4rem;
+                left: 1rem;
+                height: 2rem;
+                width: calc(100% - 2rem);
+                font-size: 1.333rem;
+                color: $text;
+                font-weight: 400;
+                @include atSmall {
+                    width: calc(100% - 1.5rem);
+                    height: 1.5rem;
+                    font-size: 1rem;
+                    left: 0.75rem;
+                }
+                &--accent {
+                    font-weight: 700;
+                }
+                &:focus {
+                    background-color: #F1F1F1;
+                    padding: 0 0.25rem;
+                }
+            }
+            &-label {
+                font-family: $main;
+                font-size: 1.333rem;
+                color: #9B9B9B;
+                font-weight: 400;
+                position: absolute;
+                z-index: 5;
+                top: 0.65rem;
+                left: 1rem;
+                @include atSmall {
+                    font-size: 1rem;
+                    top: 0.55rem;
+                    left: 0.75rem;
+                }
+            }
+            &-dropdown {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                appearance: none;
+                border: 0 ;
+                border-radius: 5px;
+                background-color: $white;
+                padding-left: 2rem;
+                background-image: url("../images/card-dropdown-arrow.png");
+                background-size: 10px 6px;
+                background-position: calc(100% - 1.4375rem) center;
+                background-repeat: no-repeat;
+                font-family: $main;
+                font-weight: 400;
+                color: $text;
+                font-size: 1.33rem;
+                @include atSmall {
+                    font-size: 1rem;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+            &-actions {
+                margin-top: 1.333rem;
+                @include atSmall {
+                    margin-top: 1.25rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+            &-salvar {
+                font-family: $main;
+                color: $text;
+                font-size: 1.1667rem;
+                font-weight: 400;
+                position: relative;
+                padding-left: 26px;
+                cursor: pointer;
+                margin-bottom: 1rem;
+                @include atSmall {
+                    font-size: 0.875rem;
+                    margin-bottom: 0;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    height: 13px;
+                    width: 13px;
+                    border-radius: 3px;
+                    border: 1px solid #BDC5C8;
+                }
+                &--active {
+                    &:before {
+                        background-color: $brand-alt;
+                        border-color: $brand-alt;
+                    }
+                }
+            }
+            &-btn {
+                @include atSmall {
+                    font-size: 1rem;
+                }
+                @include atMedium {
+                    font-size: 1.1875rem;
+                }
+            }
+            &-message {
+                text-align: center;
+                margin-top: 1.667rem;
+                font-family: $main;
+                color: $accent-pink;
+                font-weight: 400;
+                font-size: 1.333rem;
+                @include atSmall {
+                    margin-top: 1.25rem;
+                    font-size: 1rem;
+                }
             }
         }
     }
